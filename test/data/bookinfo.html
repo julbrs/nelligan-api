@@ -1,0 +1,532 @@
+<!-- 2006 WebPAC Pro Version, set from 22 August, 2006 -->
+<!-- This file last changed: 2 June, 2006 -->
+<html   dir="LTR">
+<head>
+<title>RESEAU DES BIBLIOTHEQUES DE MONTREAL - Kovar                              / All</title>
+<base target="_self"/>
+<link rel="stylesheet" type="text/css" href="/scripts/ProStyles.css" />
+<link rel="stylesheet" type="text/css" href="/screens/ProStyles.css" />
+<link rel="shortcut icon" type="ximage/icon" href="/screens/favicon.ico" />
+<script type="text/javascript" src="/scripts/common.js">
+</script>
+<script type="text/javascript" src="/scripts/elcontent.js">
+</script>
+
+<script type="text/javascript" src="/screens/bibdisplay.js"></script><script type="text/javascript" src="/screens/brief.js"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-25478931-21"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-25478931-21');</script>
+</head>
+<body bgcolor="#FFFFFF" >
+<!-- Toutes les collections Réseau : Secteurs adultes et jeunes ---->
+<!-- Silver Version, last changed: 1 September, 2004 -->
+<body background="/screens/fond.gif"><center>
+<span style="position:relative; top: 0px; left:0px; width: 780px">
+<a href="http://ville.montreal.qc.ca/english" target="_blank"><img src="/screens/logo-ville.gif" border=0 alt="Montr&eacute;al"></a><img src="/screens/l01-ver-g.gif" border=0 alt=""><a href="/search"><img src="/screens/bout-home.gif" border=0 alt="Home"></a><a href="/patroninfo/?"><img src="/screens/bout-account.gif" border=0 alt="My Account"></a><a href="/screens/help_index.html"><img src="/screens/bout-help.gif" alt="Help" border=0></a><img src="/screens/bout-vide-2.gif" border=0><img src="/screens/bout-vide-1.gif" border=0 alt=""><img src="/screens/bout-z3950.gif" border=0 alt=""><img src="/screens/bout-vide.gif" border=0><a href="/search*frc"><img src="/screens/bout-francais.gif" border=0 alt="Version fran&ccedil;aise"></a><br /><a href="http://ville.montreal.qc.ca/biblio" target="_top"><img src="/screens/logo-biblio.gif" border=0 alt="Site Web du R&eacute;seau des biblioth&egrave;ques publiques de Montr&eacute;al"></a><!--<a href="http://ville.montreal.qc.ca/pls/portal/url/page/biblio_en/accueil" target="_top"><img src="/screens/logo-biblio-en.gif" border=0 alt="Montr&eacute;al Public Libraries network"></a>--><img src="/screens/l02-ver-g.gif" border=0 alt=""><img src="/screens/en-bi-txt-58.gif" border=0 alt="Nelligan Catalogue : All the collections &#150;  Adult and Children's"><img src="/screens/bi-reseau.gif" border=0 alt="">
+<table background="/screens/fond-sous-bi-y270.gif" cellspacing="0" cellpadding="0" width="780" border=0>
+<tr><td>
+<!-- Fin du fichier logo du haut---->
+
+<script type="text/JavaScript">
+<!-- Hide the JS
+startTimeout(1200000, "/");
+// -->
+</script>
+<div id="TimeoutPopup" tabindex="0" class="modal" onkeypress="refreshSession(event)">
+<div class="modal-content">
+Your session will expire automatically in <span id=TimeoutSeconds>0</span> seconds.<br>
+<br>
+<button id="CancelTimeout" onclick="refreshSession()">Continue session</button>
+<button id="DoTimeout" onclick="endSession()">End session now</button></div>
+</div>
+<noscript>
+<meta http-equiv="Refresh" content="1200;URL=/" />
+</noscript>
+<!--this is customized <screens/bib_display.html>-->
+
+<table width="780" border="0" cellspacing="0" cellpadding="0">
+<tr valign="top">
+<td width="10">&nbsp;</td>
+<td align="center"><br><br>
+<!----- Barre des boutons de navigation ----->
+<a href="http://nelligan.ville.montreal.qc.ca:80/search"><img src="/screens/startover.gif" alt="Start Over" border="0" /></a>
+<a href="/search~S58?/.b2674328/.b2674328/1%2C1%2C1%2CB/request~b2674328"><img src="/screens/request.gif" alt="Reserve this title" alt="Reserve this item" border="0"></a>
+<a href="/search~S58?/.b2674328/.b2674328/1,1,1,B/?save_func=save_to_mylist&save=b2674328&returnurl=/search~S58?/.b2674328/.b2674328/1%2C1%2C1%2CB/frameset~b2674328"><img src="/screens/mylists_record.gif" alt="Add to Your Wish Lists" border="0"/></a>
+<a href="/search~S58?/.b2674328/.b2674328/1,1,1,B/frameset~b2674328?save=b2674328"><img src="/screens/bibexport.gif" alt="Export" border="0" /></a>
+<a href="/search~S58/,"><img src="/screens/another.gif" alt="New search"" alt="Another Search" border="0" /></a>
+<br>
+<!----- Historique de recherche ----->
+</td>
+<td width="5">&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td class="main-arr" align="right"><br>
+<!----- "Web Works Quick Edit" ----->
+<!<!--{catedit}-->
+</td>
+<td width="5">&nbsp;</td>
+</tr>
+</table>
+
+<table background="/screens/fond-ligne-gauche.gif" width="780" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>&nbsp;</td>
+<td class="main-arr" align="center" background="/screens/fond-srchtool.gif" colspan="2"><br>
+<form target="_self" action="/search~S58/" method='get'>
+      <label for="searchtype" style="display:none;">Search Type1</label><select name="searchtype" id="searchtype">
+        <option value="Y"> Keyword</option>
+        <option value="t"> Title</option>
+        <option value="a"> Author</option>
+        <option value="j"> French Subject</option>
+        <option value="d"> English Subject</option>
+        <option value="s"> Series Title</option>
+        <option value="c"> Call no.</option>
+        <option value="." selected="selected"> Record no.</option>
+      </select>
+      &nbsp;
+      <label for="searcharg" style="display:none;">Search</label><input type="text" name="searcharg" id="searcharg" size="30" onchange='return searchtoolSubmitAction()'maxlength="75" value="b2674328" />
+      &nbsp;
+      <label for="searchscope" style="display:none;">Search Scope</label><select name="searchscope" id="searchscope">
+        <option value="29"> Bor. Ahuntsic - Cartierville</option>
+        <option value="30"> Bor. Ahuntsic - Cartierville (Adult)</option>
+        <option value="31"> Bor. Ahuntsic - Cartierville (Children's)</option>
+        <option value="65"> Bor. Anjou</option>
+        <option value="66"> Bor. Anjou (Adult)</option>
+        <option value="67"> Bor. Anjou (Children's)</option>
+        <option value="50"> Bor. Côte-des-Neiges - NDG</option>
+        <option value="51"> Bor. Côte-des-Neiges - NDG (Adult)</option>
+        <option value="52"> Bor. Côte-des-Neiges - NDG (Children's)</option>
+        <option value="79"> Bor. L'Île-Bizard - Ste-Geneviève</option>
+        <option value="80"> Bor. L'Île-Bizard - Ste-Geneviève (Adult)</option>
+        <option value="81"> Bor. L'Île-Bizard - Ste-Geneviève (Children's)</option>
+        <option value="103"> Bor. Lachine</option>
+        <option value="104"> Bor. Lachine (Adult)</option>
+        <option value="105"> Bor. Lachine (Children's)</option>
+        <option value="89"> Bor. LaSalle</option>
+        <option value="90"> Bor. LaSalle (Adult)</option>
+        <option value="91"> Bor. LaSalle (Children's)</option>
+        <option value="35"> Bor. Mercier - Hochelaga-Maisonneuve</option>
+        <option value="36"> Bor. Mercier - Hochelaga-Mais. (Adult)</option>
+        <option value="37"> Bor. Mercier - Hochelaga-Mais. (Children's)</option>
+        <option value="100"> Bor. Montréal-Nord</option>
+        <option value="101"> Bor. Montréal-Nord (Adult)</option>
+        <option value="102"> Bor. Montréal-Nord (Children's)</option>
+        <option value="59"> Bor. Outremont</option>
+        <option value="61"> Bor. Outremont (Adult)</option>
+        <option value="62"> Bor. Outremont (Children's)</option>
+        <option value="72"> Bor. Pierrefonds - Roxboro</option>
+        <option value="73"> Bor. Pierrefonds - Roxboro (Adult)</option>
+        <option value="74"> Bor. Pierrefonds - Roxboro (Children's)</option>
+        <option value="44"> Bor. Plateau-Mont-Royal</option>
+        <option value="45"> Bor. Plateau-Mont-Royal (Adult)</option>
+        <option value="46"> Bor. Plateau-Mont-Royal (Children's)</option>
+        <option value="32"> Bor. R-D-Prairies - P-A-Trembles</option>
+        <option value="33"> Bor. R-D-Prairies - P-A-Trembles (Adult)</option>
+        <option value="34"> Bor. R-D-Prairies - P-A-Trembles (Children's)</option>
+        <option value="41"> Bor. Rosemont - La Petite-Patrie</option>
+        <option value="42"> Bor. Rosemont - La Petite-Patrie (Adult)</option>
+        <option value="43"> Bor. Rosemont - La Petite-Patrie (Children's)</option>
+        <option value="87"> Bor. Saint-Laurent</option>
+        <option value="84"> Bor. Saint-Laurent Adultes</option>
+        <option value="85"> Bor. Saint-Laurent Jeunes</option>
+        <option value="93"> Bor. Saint-Léonard</option>
+        <option value="94"> Bor. Saint-Léonard (Adult)</option>
+        <option value="95"> Bor. Saint-Léonard (Children's)</option>
+        <option value="53"> Bor. Sud-Ouest</option>
+        <option value="54"> Bor. Sud-Ouest (Adult)</option>
+        <option value="55"> Bor. Sud-Ouest (Children's)</option>
+        <option value="108"> Bor. Verdun</option>
+        <option value="109"> Bor. Verdun (Adult)</option>
+        <option value="110"> Bor. Verdun (Children's)</option>
+        <option value="38"> Bor. Villeray - St-Michel - P-Ext.</option>
+        <option value="39"> Bor. Villeray - St-Michel - P-Ext. (Adult)</option>
+        <option value="40"> Bor. Villeray - St-Michel - P-Ext. (Children's)</option>
+        <option value="47"> Bor. Ville-Marie</option>
+        <option value="48"> Bor. Ville-Marie (Adult)</option>
+        <option value="49"> Bor. Ville-Marie (Children's)</option>
+        <option value="1"> Bibliothèque Ahuntsic</option>
+        <option value="97"> Bibliothèque Belleville</option>
+        <option value="2"> Bibliothèque Benny</option>
+        <option value="3"> Bibliothèque Cartierville</option>
+        <option value="5"> Bibliothèque Côte-des-Neiges</option>
+        <option value="99"> Bibliothèque de la MCC</option>
+        <option value="86"> Bibliothèque du Boisé</option>
+        <option value="6"> Bibliothèque Frontenac</option>
+        <option value="7"> Bibliothèque Georges-Vanier</option>
+        <option value="64"> Bibliothèque du Haut-Anjou</option>
+        <option value="96"> Bibliothèque Henri-Bourassa</option>
+        <option value="8"> Bibliothèque Hochelaga</option>
+        <option value="112"> Bibliothèque Île des Sœurs</option>
+        <option value="9"> Bibliothèque interculturelle</option>
+        <option value="111"> Bibliothèque J-De Repentigny</option>
+        <option value="63"> Bibliothèque Jean-Corbeil</option>
+        <option value="10"> Bibliothèque La Petite-Patrie</option>
+        <option value="11"> Bibliothèque Langelier</option>
+        <option value="12"> Bibliothèque Le Prévost</option>
+        <option value="77"> Bibliothèque L'Île-Bizard</option>
+        <option value="88"> Bibliothèque L'Octogone</option>
+        <option value="13"> Bibliothèque Maisonneuve</option>
+        <option value="68"> Bibliothèque Marc-Favreau</option>
+        <option value="14"> Bibliothèque Marie-Uguay</option>
+        <option value="15"> Bibliothèque Mercier</option>
+        <option value="16"> Bibliothèque Mordecai-Richler</option>
+        <option value="18"> Bibliothèque Notre-Dame-de-Grâce</option>
+        <option value="60"> Bibliothèque Outremont</option>
+        <option value="19"> Bibliothèque Parc-Extension</option>
+        <option value="4"> Bibliothèque Père-Ambroise</option>
+        <option value="75"> Bibliothèque Pierrefonds</option>
+        <option value="20"> Bibliothèque Plateau-Mont-Royal</option>
+        <option value="21"> Bibliothèque Pointe-aux-Trembles</option>
+        <option value="22"> Bibliothèque Rivière-des-Prairies</option>
+        <option value="23"> Bibliothèque Rosemont</option>
+        <option value="82"> Bibliothèque Roxboro</option>
+        <option value="24"> Bibliothèque Saint-Charles</option>
+        <option value="17"> Bibliothèque Saint-Henri</option>
+        <option value="92"> Bibliothèque Saint-Léonard</option>
+        <option value="25"> Bibliothèque Saint-Michel</option>
+        <option value="107"> Bibliothèque Saint-Pierre</option>
+        <option value="26"> Bibliothèque Salaberry</option>
+        <option value="106"> Bibliothèque Saul-Bellow</option>
+        <option value="83"> Bibliothèque Vieux-Saint-Laurent</option>
+        <option value="98"> Bibliothèque Yves-Ryan</option>
+        <option value="28"> Biblio-courrier</option>
+        <option value="58" selected="selected"> All the collections</option>
+        <option value="56"> Adult</option>
+        <option value="57"> Children's</option>
+        <option value="69"> CCE DE PIERREFONDS</option>
+        <option value="70"> CCE DE PIERREFONDS - Adultes</option>
+        <option value="71"> CCE DE PIERREFONDS - Jeunes</option>
+      </select>
+      &nbsp;
+      <input type="hidden" name="SORT" value="D" /><input type="hidden" name="extended" value="0" />      <input type="submit" name="SUBMIT" value="Search" onclick='return searchtoolSubmitAction();' />
+<div>
+      <input type="checkbox" name="availlim" value="1"  /> <span class="availLimMessage" align="left">Limit search to available items</span><br/>
+</div>
+<div>
+      <input type="hidden" name="searchlimits" value="" />
+      <input type="hidden" name="searchorigarg" value=".b2674328" />
+</div>
+</form>
+<br>
+</td>
+<td width="5">&nbsp;</td>
+</tr>
+
+
+<tr height="5">
+<!--------------------------- Ligne horizontale ----------------->
+<td>&nbsp;</td>
+<td colspan="2">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr valign="top">
+<td width="15">&nbsp;</td>
+<!--------------------------- Affiche le nom de l'auteur, le titre et l'éditeur ---->
+<td class="main-arr" width="585">
+<!-- BEGIN BIBDETAIL TABLE BORDER -->
+<table width="100%" border="0" cellspacing="1" cellpadding="2"  class="bibDetail">
+<tr  class="bibInfoEntry" ><td>
+<!-- BEGIN INNER BIB TABLE -->
+<table width="100%" cellspacing="3" cellpadding="0">
+<tr><!-- next row for fieldtag=t -->
+<td valign="top" width="20%"  class="bibInfoLabel">Title</td>
+<td class="bibInfoData">
+<strong>La magie du rangement illustrée / Marie Kondo &#59; dessins, Yuko Uramoto &#59; traduction et adaptation, Fabien Vautrin & Maiko_O.</strong></td></tr>
+<tr><!-- next row for fieldtag=a -->
+<td valign="top" width="20%"  class="bibInfoLabel">Author</td>
+<td class="bibInfoData">
+<a href="/search~S58?/aKond{u014D}%2C+Marie%2C/akondo+marie/-3,-1,0,B/browse">Kondō, Marie, auteur</a>
+
+</td></tr>
+<tr><!-- next row for fieldtag=p -->
+<td valign="top" width="20%"  class="bibInfoLabel">Publication Info.</td>
+<td class="bibInfoData">
+<a href="/search~S58?/mKurokawa%2C/mkurokawa/-3,-1,0,B/browse">Paris : Kurokawa, [2018]</a>
+
+</td></tr>
+</table>
+<!-- END INNER BIB TABLE -->
+</td></tr>
+</table>
+<!-- END BIBDETAIL TABLE -->
+<td align="right" width="175">
+</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr valign="top">
+<td width="15">&nbsp;</td>
+<td class="main-arr">
+<!--------------------------- Intitule et contenu :  Sujet, Description, Resume, Public cible, ISBN ---->
+<!--------------------------- Page precedente et page suivante ---->
+<!-- BEGIN BIBDETAIL TABLE BORDER -->
+<table width="100%" border="0" cellspacing="1" cellpadding="2"  class="bibDetail">
+<tr  class="bibInfoEntry" ><td>
+<!-- BEGIN INNER BIB TABLE -->
+<table width="100%" cellspacing="3" cellpadding="0">
+<tr><!-- next row for fieldtag=s -->
+<td valign="top" width="20%"  class="bibInfoLabel">Series</td>
+<td class="bibInfoData">
+<a href="/search~S58?/sKuropop/skuropop/-3,-1,0,B/browse">Kuropop</a>
+
+</td></tr>
+<tr><!-- next row for fieldtag=s -->
+<td></td>
+<td class="bibInfoData">
+<a href="/search~S58?/sKuropop/skuropop/-3,-1,0,B/browse">Kuropop</a>
+
+</td></tr>
+<tr><!-- next row for fieldtag=d -->
+<td valign="top" width="20%"  class="bibInfoLabel">Genre</td>
+<td class="bibInfoData">
+<a href="/search~S58?/jMangas/jmangas/-3,-1,0,B/browse">Mangas</a>
+
+</td></tr>
+<tr><!-- next row for fieldtag=d -->
+<td></td>
+<td class="bibInfoData">
+<a href="/search~S58?/jBandes+dessin{u00E9}es+autres+que+de+fiction/jbandes+dessinees+autres+que+de+fiction/-3,-1,0,B/browse">Bandes dessinées autres que de fiction</a>
+
+</td></tr>
+<tr><!-- next row for fieldtag=d -->
+<td valign="top" width="20%"  class="bibInfoLabel">French&nbsp;Subject</td>
+<td class="bibInfoData">
+<a href="/search~S58?/jHabitations+--+Entretien+journalier+--+Bandes+des/jhabitations+entretien+journalier+bandes+dessinees/-3,-1,0,B/browse">Habitations -- Entretien journalier -- Bandes dessinées</a>
+
+</td></tr>
+<tr><!-- next row for fieldtag=d -->
+<td></td>
+<td class="bibInfoData">
+<a href="/search~S58?/jRangement+{u00E0}+la+maison+--+Bandes+dessin/jrangement+a+la+maison+bandes+dessinees/-3,-1,0,B/browse">Rangement à la maison -- Bandes dessinées</a>
+
+</td></tr>
+<tr><!-- next row for fieldtag=d -->
+<td></td>
+<td class="bibInfoData">
+<a href="/search~S58?/jOrdre+--+Bandes+dessin{u00E9}es/jordre+bandes+dessinees/-3,-1,0,B/browse">Ordre -- Bandes dessinées</a>
+
+</td></tr>
+<tr><!-- next row for fieldtag=b -->
+<td valign="top" width="20%"  class="bibInfoLabel">Other Author</td>
+<td class="bibInfoData">
+<a href="/search~S58?/aUramoto%2C+Yuko%2C/auramoto+yuko/-3,-1,0,B/browse">Uramoto, Yuko, artiste</a>
+
+</td></tr>
+</table>
+<!-- END INNER BIB TABLE -->
+</td></tr>
+</table>
+<!-- END BIBDETAIL TABLE -->
+<!-- BEGIN BIBDETAIL TABLE BORDER -->
+<table width="100%" border="0" cellspacing="1" cellpadding="2"  class="bibDetail">
+<tr  class="bibInfoEntry" ><td>
+<!-- BEGIN INNER BIB TABLE -->
+<table width="100%" cellspacing="3" cellpadding="0">
+<tr><!-- next row for fieldtag=r -->
+<td valign="top" width="20%"  class="bibInfoLabel">Description</td>
+<td class="bibInfoData">
+188 pages : principalement des illustrations &#59; 19 cm.</td></tr>
+<tr><!-- next row for fieldtag=n -->
+<td valign="top" width="20%"  class="bibInfoLabel">Audience</td>
+<td class="bibInfoData">
+A 3.</td></tr>
+<tr><!-- next row for fieldtag=i -->
+<td valign="top" width="20%"  class="bibInfoLabel">ISBN</td>
+<td class="bibInfoData">
+9782368526460 (broché)</td></tr>
+</table>
+<!-- END INNER BIB TABLE -->
+</td></tr>
+</table>
+<!-- END BIBDETAIL TABLE -->
+
+</td>
+<td>&nbsp;</td>
+<td width="5">&nbsp;</td>
+</tr>
+
+<tr valign="top">
+<td>&nbsp;</td>
+<td class="main-arr" colspan="2">
+<!----- La disponibilite des documents n'apparaît pas si on masque ces tokens  ---->
+</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+<td class="main-arr" colspan="2">
+<!----- Lien sur le nom de l'auteur ----->
+<!-----Lien vers documents attaches  ---->
+<!-----Objet binaire associe au document  ---->
+<!----- Lien sur image associe au document ---->
+<!----- Lien sur une imagette (thumbnails) ---->
+<!----- Lien vers fichier xml attache ---->
+<!----- Localisation : Nom des bibliotheques qui ont le document avec statut de disponibilite  ---->
+<table width="100%" border="0" cellspacing="1" cellpadding="2" class="bibItems">
+<tr  class="bibItemsHeader">
+<th width="37%"  class="bibItemsHeader">
+Location
+</th>
+<th width="17%"  class="bibItemsHeader">
+Note
+</th>
+<th width="27%"  class="bibItemsHeader">
+Call No.
+</th>
+<th width="19%"  class="bibItemsHeader">
+Status
+</th>
+</tr>
+<tr  class="bibItemsEntry">
+
+<td width="37%" ><!-- field 1 -->&nbsp;AHUNTSIC - Adultes - Nouveautés
+</td>
+<td width="17%" ><!-- field ! -->&nbsp;</td>
+<td width="27%" ><!-- field C -->&nbsp;<a href="/search~S58?/cKON_Mar+MANGA/ckon_mar+manga/-3,-1,,B/browse">KON_Mar MANGA</a> <!-- field v --><!-- field n --></td>
+<td width="19%" ><!-- field % -->&nbsp;DUE 19-11-05 </td></tr>
+<tr  class="bibItemsEntry">
+
+<td width="37%" ><!-- field 1 -->&nbsp;AHUNTSIC - Adultes - Nouveautés
+</td>
+<td width="17%" ><!-- field ! -->&nbsp;</td>
+<td width="27%" ><!-- field C -->&nbsp;<a href="/search~S58?/cKON_Mar+MANGA/ckon_mar+manga/-3,-1,,B/browse">KON_Mar MANGA</a> <!-- field v --><!-- field n --></td>
+<td width="19%" ><!-- field % -->&nbsp;DUE 19-11-07 </td></tr>
+<tr  class="bibItemsEntry">
+
+<td width="37%" ><!-- field 1 -->&nbsp;BENNY - Adultes - Nouveautés
+</td>
+<td width="17%" ><!-- field ! -->&nbsp;</td>
+<td width="27%" ><!-- field C --><!-- field v --><!-- field n --></td>
+<td width="19%" ><!-- field % -->&nbsp;DUE 19-11-07 </td></tr>
+<tr  class="bibItemsEntry">
+
+<td width="37%" ><!-- field 1 -->&nbsp;BIBLIO-COURRIER - Adultes - Romans
+</td>
+<td width="17%" ><!-- field ! -->&nbsp;FRENCH COLL.</td>
+<td width="27%" ><!-- field C -->&nbsp;<a href="/search~S58?/cKON_Mar+MANGA/ckon_mar+manga/-3,-1,,B/browse">KON_Mar MANGA</a> <!-- field v --><!-- field n --></td>
+<td width="19%" ><!-- field % -->&nbsp;AVAILABLE </td></tr>
+<tr  class="bibItemsEntry">
+
+<td width="37%" ><!-- field 1 -->&nbsp;C-D-NEIGES - Adultes - Nouveautés
+</td>
+<td width="17%" ><!-- field ! -->&nbsp;</td>
+<td width="27%" ><!-- field C --><!-- field v --><!-- field n --></td>
+<td width="19%" ><!-- field % -->&nbsp;DUE 19-11-06 </td></tr>
+<tr  class="bibItemsEntry">
+
+<td width="37%" ><!-- field 1 -->&nbsp;CARTIERVILLE - Adultes - Nouveautés
+</td>
+<td width="17%" ><!-- field ! -->&nbsp;</td>
+<td width="27%" ><!-- field C --><!-- field v --><!-- field n -->&nbsp;Loisirs </td>
+<td width="19%" ><!-- field % -->&nbsp;DUE 19-11-13 </td></tr>
+<tr  class="bibItemsEntry">
+
+<td width="37%" ><!-- field 1 -->&nbsp;DU BOISÉ - Adultes - Mangas
+</td>
+<td width="17%" ><!-- field ! -->&nbsp;FRENCH COLL.</td>
+<td width="27%" ><!-- field C -->&nbsp;<a href="/search~S58?/cKON_Mar+MANGA/ckon_mar+manga/-3,-1,,B/browse">KON_Mar MANGA</a> <!-- field v --><!-- field n --></td>
+<td width="19%" ><!-- field % -->&nbsp;DUE 19-11-19 </td></tr>
+<tr  class="bibItemsEntry">
+
+<td width="37%" ><!-- field 1 -->&nbsp;FRONTENAC - Adultes - Mangas
+</td>
+<td width="17%" ><!-- field ! -->&nbsp;</td>
+<td width="27%" ><!-- field C -->&nbsp;<a href="/search~S58?/cKON_Mar+MANGA/ckon_mar+manga/-3,-1,,B/browse">KON_Mar MANGA</a> <!-- field v --><!-- field n --></td>
+<td width="19%" ><!-- field % -->&nbsp;IN TRANSIT </td></tr>
+<tr  class="bibItemsEntry">
+
+<td width="37%" ><!-- field 1 -->&nbsp;GEORGES-VANIER - Adultes - Nouveautés
+</td>
+<td width="17%" ><!-- field ! -->&nbsp;</td>
+<td width="27%" ><!-- field C --><!-- field v --><!-- field n --></td>
+<td width="19%" ><!-- field % -->&nbsp;DUE 19-11-23 </td></tr>
+<tr  class="bibItemsEntry">
+
+<td width="37%" ><!-- field 1 -->&nbsp;HENRI-BOURASSA - Adultes - Documentaires
+</td>
+<td width="17%" ><!-- field ! -->&nbsp;</td>
+<td width="27%" ><!-- field C --><!-- field v --><!-- field n --></td>
+<td width="19%" ><!-- field % -->&nbsp;IN TRANSIT </td></tr>
+</table>
+<div style="text-align:center"><form method="post" action="/search~S58?/.b2674328/.b2674328/1,1,1,B/holdings~2674328&FF=&1,0,">
+<input type="submit" value="View additional copies or search for a specific volume/copy" />
+<input type="text" name="volume" size="6" />
+</form></div><p>
+</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+<td class="main-arr" colspan="2">
+<!----- Voir exemplaires supplementaires (choix de no de volume) ---->
+<!<!--{holds}-->
+<!----- ??? ---->
+<!----- ??? ---->
+<!<!--{booking}-->
+<!----- ??? ---->
+<!<!--{orders}-->
+</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+<td class="bibLinks" colspan="2">
+<!<!--{recordlink}-->
+<!----- Lien(s) vers page(s) couverture(s) (s si plusieurs volumes) ---->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="bibLinks">
+<tr><th>
+Connect to</th></tr>
+<tr align="center">
+<td >
+<a href="http://nelligandecouverte.ville.montreal.qc.ca/numerisation/couvertures/face/9782368526460c.jpg">Page couverture</a><br />
+
+
+</td>
+</tr>
+</table>
+<!----- ??? ---->
+<!-----??? ---->
+<!----- ??? ---->
+<!----- ??? ---->
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td  align="right" width="175">
+<br /><br />
+</td>
+<td>&nbsp;</td>
+</tr>
+
+<br />
+
+<!------ Fin de la page ----->
+</tr>
+</td>
+</table>
+<table width="780" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+<tr height="23">
+<td  background="/screens/fond-bas-page.gif" colspan="2">&nbsp;
+</td>
+</tr>
+<tr>
+<td width="20">&nbsp;</td>
+<td class="main-credit">
+Nelligan banner: <br />
+<b>Roseline Granet</b>, <i>Monument &agrave; &Eacute;mile Nelligan</i> (2005).<br />
+Saint-Louis Square, Plateau-Mont-Royal Borough, &#169;Ville de Montr&eacute;al 2006. <br /><br /><br />
+</td>
+</tr>
+</table>
+</body>
+</html>
+
+
+</body>
+</html>
+
+
+</table>

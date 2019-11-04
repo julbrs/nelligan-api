@@ -1,0 +1,56 @@
+<html><head>
+<script type="text/javascript" src="/scripts/common.js">
+</script>
+<br />
+<a href="/search"><img src="/screens/startover.gif" alt="Start Over" border="0" /></a>
+<p>
+<br /><h2>No Such Record</h2><br /><form name="htmlbrinputscreen_form" method="GET" action=/search~S58/,>
+<br />Record no. <input type="TEXT" name="SEARCH">
+<script type="text/JavaScript">
+
+function iiiDoSubmit_1()
+{
+//getFormHandleForm() is in common.js
+var obj = getFormHandleForm(1);
+obj.submit();
+}
+</script>
+<input type="hidden" id="iiiFormHandle_1"/>
+<a href="#" onclick="iiiDoSubmit_1();"><img src="/screens/submit.gif" alt="submit" align="middle" border="0" /></a>
+
+
+
+<script type="text/JavaScript">
+
+//getFormHandleForm() is in common.js
+var evtobj = getFormHandleForm(1);
+if (document.layers)
+    {
+    document.captureEvents(Event.KEYUP);
+    }
+document.onkeyup = function(evt)
+{
+if (!evt) evt = window.event;
+var keyCode;
+if (evt.which) keyCode = evt.which;
+else if (evt.keyCode) keyCode = evt.keyCode;
+var targ;
+if (evt.target) targ = evt.target;
+else if (evt.srcElement) targ = evt.srcElement;
+if (targ.nodeType == 3) //for Safari bug
+    targ = targ.parentNode;
+if (targ.form)
+    {
+    targ = targ.form;
+    //alert('targ='+targ+'  evtobj='+evtobj);
+    if (keyCode == 13 && targ == evtobj)
+        {
+        iiiDoSubmit_1();
+        }
+    }
+};
+
+</script>
+</form>
+</body>
+</html>

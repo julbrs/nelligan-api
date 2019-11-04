@@ -4,7 +4,7 @@
   "description": "API to connect to Nelligan webservice",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "author": "Julien Bras <julienbras@sidoine.org>",
   "license": "MIT",
@@ -14,5 +14,8 @@
   },
   "bugs": "https://github.com/bobman38/nelligan-api/issues",
   "homepage": "https://github.com/bobman38/nelligan-api#readme",
-  "repository": "github:bobman38/nelligan-api"
+  "repository": "github:bobman38/nelligan-api",
+  "devDependencies": {
+    "nock": "^11.7.0"
+  }
 }

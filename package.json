@@ -1,6 +1,6 @@
 {
   "name": "nelligan-api",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "API to connect to Nelligan webservice",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
+    "marcrecord": "^1.1.10",
     "request": "^2.88.0"
   },
   "bugs": "https://github.com/bobman38/nelligan-api/issues",

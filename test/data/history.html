@@ -1,0 +1,647 @@
+<html dir="LTR"><head>
+<link rel="stylesheet" type="text/css" href="/scripts/ProStyles.css">
+<link rel="stylesheet" type="text/css" href="/screens/ProStyles.css">
+<script type="text/javascript" src="/scripts/elcontent.js">
+</script>
+<script type="text/javascript" src="/scripts/common.js">
+</script>
+</head>
+<body onload="document.forms[1].elements[1].focus();" bgcolor="#FFFFFF" background="/screens/fond.gif">
+
+<!--Debut de la partie logo du haut-->
+
+
+<title>RESEAU DES BIBLIOTHEQUES DE MONTREAL - Kovar                              / All</title>
+<base target="_self">
+<link rel="stylesheet" type="text/css" href="/scripts/ProStyles.css">
+<link rel="stylesheet" type="text/css" href="/screens/ProStyles.css">
+<link rel="shortcut icon" type="ximage/icon" href="/screens/favicon.ico">
+<script type="text/javascript" src="/scripts/common.js">
+</script>
+<script type="text/javascript" src="/scripts/elcontent.js">
+</script>
+
+<script type="text/javascript" src="/screens/bibdisplay.js"></script><script type="text/javascript" src="/screens/brief.js"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-25478931-21"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-25478931-21');</script>
+
+
+<!-- Toutes les collections Réseau : Secteurs adultes et jeunes ---->
+<!-- Silver Version, last changed: 1 September, 2004 -->
+<center>
+<span style="position:relative; top: 0px; left:0px; width: 780px">
+<a href="http://ville.montreal.qc.ca/english" target="_blank"><img src="/screens/logo-ville.gif" border="0" alt="Montréal"></a><img src="/screens/l01-ver-g.gif" border="0" alt=""><a href="/search"><img src="/screens/bout-home.gif" border="0" alt="Home"></a><a href="/patroninfo/?"><img src="/screens/bout-account.gif" border="0" alt="My Account"></a><a href="/screens/help_index.html"><img src="/screens/bout-help.gif" alt="Help" border="0"></a><img src="/screens/bout-vide-2.gif" border="0"><img src="/screens/bout-vide-1.gif" border="0" alt=""><img src="/screens/bout-z3950.gif" border="0" alt=""><img src="/screens/bout-vide.gif" border="0"><a href="/search*frc"><img src="/screens/bout-francais.gif" border="0" alt="Version française"></a><br><a href="http://ville.montreal.qc.ca/biblio" target="_top"><img src="/screens/logo-biblio.gif" border="0" alt="Site Web du Réseau des bibliothèques publiques de Montréal"></a><!--<a href="http://ville.montreal.qc.ca/pls/portal/url/page/biblio_en/accueil" target="_top"><img src="/screens/logo-biblio-en.gif" border=0 alt="Montr&eacute;al Public Libraries network"></a>--><img src="/screens/l02-ver-g.gif" border="0" alt=""><img src="/screens/en-bi-txt-58.gif" border="0" alt="Nelligan Catalogue : All the collections –  Adult and Children's"><img src="/screens/bi-reseau.gif" border="0" alt="">
+<table background="/screens/fond-sous-bi-y270.gif" cellspacing="0" cellpadding="0" width="780" border="0">
+<tbody><tr><td>
+<!-- Fin du fichier logo du haut---->
+
+<br>
+<script type="text/JavaScript">
+<!-- Hide the JS
+startTimeout(1200000, "/");
+// -->
+</script>
+<div id="TimeoutPopup" tabindex="0" class="modal" onkeypress="refreshSession(event)">
+<div class="modal-content">
+Your session will expire automatically in <span id="TimeoutSeconds">0</span> seconds.<br>
+<br>
+<button id="CancelTimeout" onclick="refreshSession()">Continue session</button>
+<button id="DoTimeout" onclick="endSession()">End session now</button></div>
+</div>
+<noscript>
+&lt;meta http-equiv="Refresh" content="1200;URL=/" /&gt;
+</noscript>
+<br>
+<!--this is customized <screens/patronview_web_s58.html>-->
+<!--Fin de la partie logo du haut-->
+
+<table width="780" border="0" cellspacing="0" cellpadding="4">
+<tbody><tr valign="top">
+<td width="10">&nbsp;</td>
+<td align="left" width="75">
+<!----- Bouton : Fermer la session ----->
+<form>
+<a href="/logout~S58?" target="_self"><img src="/screens/logout.gif" alt="Log Out" border="0"></a>
+<br>
+</form>
+</td>
+<td class="pat-titre" width="245" align="left">
+<!----- Nom de l'usager ----->
+<strong>%USERNAME%</strong><br>
+</td>
+<td class="pageMainArea" align="left" width="440">
+<!----- Zone de recherche ---->
+<img src="/screens/en-dossier-recherche.gif" border="0" alt="Search by keyword(s)"><br>
+<form class="unpadded" action="/search/a?a" name="Recherche" id="search">
+<input maxlength="3" name="searchtype" type="hidden" value="Y">
+<!-- ----- Zone de saisie ----- -->
+<input maxlength="75" name="searcharg" size="38" class="main-biblio"><input maxlength="3" name="searchscope" type="hidden" value="58">
+<!-- ------ Colonne 3 : Bouton Search  -------->
+<input type="hidden" name="SORT" value="D"><input type="hidden" name="extended" value="0">
+<input type="image" value="Chercher" name="submit" src="/screens/go_but_frc.gif" border="0" align="middle" alt="Search">
+</form>
+</td>
+<td width="10">&nbsp;</td>
+</tr>
+<tr>
+<td width="10">&nbsp;</td>
+<td width="320" class="main-s-titre" colspan="2">
+MY ACCOUNT
+</td>
+<td class="main-s-titre" align="left">
+CURRENT TRANSACTION(S)
+</td>
+<td width="10">&nbsp;</td>
+</tr>
+</tbody></table>
+
+
+
+<table background="/screens/fond-ligne-gauche.gif" width="780" border="0" cellspacing="0" cellpadding="4" align="center">
+<tbody><tr valign="top">
+<td width="10">&nbsp;</td>
+<td width="320" class="pat-titre">
+<strong>Modify :</strong>
+<br>
+<!----- Bouton : Mot de passe ----->
+<a href="#" onclick="return open_new_window( '/patroninfo~S58/2423460/newpin' )"><img src="/screens/pat_pin.gif" alt="Modify your PIN" border="0"></a>
+<!----- Bouton : Informations personnelles ----->
+<a href="#" onclick="return open_new_window( '/patroninfo~S58/2423460/modpinfo' )"><img src="/screens/pat_info.gif" alt="Modify Personal Information" border="0"></a>
+<br><br>
+<strong>View :</strong>
+<br>
+<!----- Bouton : Message de la bibliotheque ----->
+<!----- Bouton : Vos recherches favorites ----->
+<a href="/patroninfo~S58/2423460/getpsearches" target="_self"><img src="/screens/pat_getpsavedrecs.gif" alt="Preferred Searches" border="0"></a>
+<!----- Bouton : Historique de lecture ----->
+<!----- Bouton : Liste a lire ou coups de coeur ----->
+<a href="/patroninfo~S58/2423460/mylists" target="_self"><img src="/screens/my_lists.gif" alt="Your Wish Lists" border="0"></a>
+<br>
+</td>
+
+<td width="440" bgcolor="#ECEFF0" class="pat-titre">
+<br> <br>
+<!----- Reservations en cours ----->
+
+
+<!----- Amendes en cours ----->
+
+<!----- Pret en cours ----->
+<br>
+Loan :
+<span class="pat-transac">
+&nbsp;
+<a href="/patroninfo~S58/2423460/items" target="_self">10 Items currently checked out</a>
+<br>
+</span>
+
+
+<!----- ???  ----->
+<!--<!--{ifbookings}---->
+<!--<!--{bookingsbtn}---->
+<!--<!--{xif}---->
+</td>
+<td width="10">&nbsp;</td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+<td colspan="2">
+<!----- Probablement pour la photo de l'usager ----->
+<!--<!--{ifpatimage}---->
+<!--<!--{patimage}---->
+<!--<!--{xif}---->
+
+<!----- Bouton : My Millennium searching ----->
+<!--<!--{ifmymil}---->
+<!--<!--{searchbtn}---->
+<!--<!--{xif}---->
+<hr color="#990000">
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td colspan="2">
+<div class="patFuncArea">
+<!-- BEGIN READING HISTORY TABLE -->
+<form name="PHISTORYFORM" method="GET">
+<a href="/patroninfo~S58/2423460/readinghistory/rsh" onclick="return removecheckedconfirm(PHISTORYFORM,'/patroninfo~S58/2423460/readinghistory/rsh','The marked items will be irreversibly deleted.  Proceed?',0)"><img src="/screens/pat_delete_marked.gif" class="button" border="0" alt="Delete Marked"></a>
+<a href="/patroninfo~S58/2423460/readinghistory/rah" onclick="return removeallconfirm(PHISTORYFORM,'/patroninfo~S58/2423460/readinghistory/rah','Your entire reading history will be irreversibly deleted.  Proceed?',0)"><img src="/screens/pat_delete_all.gif" class="button" border="0" alt="Delete All"></a>
+<a href="/patroninfo~S58/2423460/readinghistory" onclick="return replace_or_redraw('/patroninfo~S58/2423460/readinghistory' + '?export=true')"><img src="/screens/export_readinglist.gif" class="button" border="0" alt="Export reading history"></a>
+<a href="/patroninfo~S58/2423460/readinghistory/OptOut"><img src="/screens/reading_history_optout.gif" class="button" border="0" alt="Disable your reading history"></a>
+<table border="0" class="patFunc">
+<tbody><tr class="patFuncTitle">
+<!-- BEGIN READING HISTORY PAGER -->
+<!-- begin page widgit -->
+</tr><tr class="browsePager"><td style="text-align:center" class="browsePager" colspan="5">
+
+Result Page&nbsp;&nbsp;&nbsp;<strong>1</strong>
+<a href="readinghistory&amp;page=2">2</a>
+<a href="readinghistory&amp;page=3">3</a>
+<a href="readinghistory&amp;page=4">4</a>
+<a href="readinghistory&amp;page=2"><img src="/screens/bib_paging_next.gif" alt="Next page" align="bottom" border="0"></a>
+<!-- end page widgit -->
+</td>
+</tr>
+<!-- END READING PAGER -->
+
+
+<tr class="patFuncTitle"><th colspan="5" class="patFuncTitle">Reading History ( Records 1-50 of 190 )</th>
+</tr>
+<tr class="patFuncHeaders"><th class="patFuncHeaders">Mark</th>
+<th class="patFuncHeaders"><a href="/patroninfo~S58/2423460/readinghistory" onclick="return onClickSubmitCheckedList( PHISTORYFORM, '/patroninfo~S58/2423460/readinghistory', 'sort', 'title', 0)">Title</a></th><th class="patFuncHeaders"><a href="/patroninfo~S58/2423460/readinghistory" onclick="return onClickSubmitCheckedList( PHISTORYFORM, '/patroninfo~S58/2423460/readinghistory', 'sort', 'author', 0)">Author</a></th><th class="patFuncHeaders"><span class="sortSelected">Checked Out</span></th>
+<th class="patFuncHeaders"><a href="/patroninfo~S58/2423460/readinghistory" onclick="return onClickSubmitCheckedList( PHISTORYFORM, '/patroninfo~S58/2423460/readinghistory', 'sort', 'details', 0)">Details</a></th></tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh9175538" id="rsh9175538"></td>
+<td width="30%"><a href="/record=b1116804~S58"><span class="patFuncTitleMain">Le théorème de Morcom / [illustrations de] Goffin sur un scénario de Peeters avec la collaboration graphique d'Etienne Schreder.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Peeters, Benoît, 1956-</td>
+<td width="15%" class="patFuncDate">2019-12-29</td>
+<td width="25%" class="patFuncDetails">Copy 1</td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh9175533" id="rsh9175533"></td>
+<td width="30%"><a href="/record=b2605321~S58"><span class="patFuncTitleMain">Proies faciles / Miguelanxo Prado ; [traduction, Sophie Hofnung].</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Prado, Miguelanxo, 1958-</td>
+<td width="15%" class="patFuncDate">2019-12-29</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh9175527" id="rsh9175527"></td>
+<td width="30%"><a href="/record=b2496088~S58"><span class="patFuncTitleMain">Yallah bye / scénario, Joseph Safieddine ; dessin, Kyungeun Park.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Safieddine, Joseph, 1986-</td>
+<td width="15%" class="patFuncDate">2019-12-29</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh9175522" id="rsh9175522"></td>
+<td width="30%"><a href="/record=b1801739~S58"><span class="patFuncTitleMain">Opération Vent printanier / scénario, Philippe Richelle ; dessin, Pierre Wachs.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Richelle, Philippe, 1964-</td>
+<td width="15%" class="patFuncDate">2019-12-29</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh9175516" id="rsh9175516"></td>
+<td width="30%"><a href="/record=b1801739~S58"><span class="patFuncTitleMain">Opération Vent printanier / scénario, Philippe Richelle ; dessin, Pierre Wachs.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Richelle, Philippe, 1964-</td>
+<td width="15%" class="patFuncDate">2019-12-29</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh9175470" id="rsh9175470"></td>
+<td width="30%"><a href="/record=b2732173~S58"><span class="patFuncTitleMain">Cherche Tom dans les couloirs du temps : Égypte ancienne / Fatti Burke ; adaptation, Intexte.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Burke, Fatti auteur, illustrateur</td>
+<td width="15%" class="patFuncDate">2019-12-29</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh9175467" id="rsh9175467"></td>
+<td width="30%"><a href="/record=b2706766~S58"><span class="patFuncTitleMain">L'île du disparu / Max de Radiguès.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Radiguès, Max de, 1982- auteur, artiste</td>
+<td width="15%" class="patFuncDate">2019-12-29</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh9175466" id="rsh9175466"></td>
+<td width="30%"><a href="/record=b1589367~S58"><span class="patFuncTitleMain">Le secret des lutins / scénario de Albern ; dessins de Tatiana Domas.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Albern.</td>
+<td width="15%" class="patFuncDate">2019-12-29</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh9175464" id="rsh9175464"></td>
+<td width="30%"><a href="/record=b2716080~S58"><span class="patFuncTitleMain">Défis zéro déchet : 32 défis à relever pour protéger la planète! / Karine Balzeau ; illustrations, Laurent Audouin.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Balzeau, Karine, auteur</td>
+<td width="15%" class="patFuncDate">2019-12-29</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh9175461" id="rsh9175461"></td>
+<td width="30%"><a href="/record=b1281583~S58"><span class="patFuncTitleMain">Astérix et les Normands / texte de René Goscinny ; dessins d'Albert Uderzo.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Goscinny, René, 1926-1977.</td>
+<td width="15%" class="patFuncDate">2019-12-29</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh9175135" id="rsh9175135"></td>
+<td width="30%"><a href="/record=b2730769~S58"><span class="patFuncTitleMain">Camion de tombereau [jeu]</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor"></td>
+<td width="15%" class="patFuncDate">2019-12-29</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh9174850" id="rsh9174850"></td>
+<td width="30%"><a href="/record=b1842039~S58"><span class="patFuncTitleMain">Camion de pompier [jeu]</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor"></td>
+<td width="15%" class="patFuncDate">2019-12-29</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh9154038" id="rsh9154038"></td>
+<td width="30%"><a href="/record=b1419130~S58"><span class="patFuncTitleMain">Morlac / Leif Tande.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Tande, Leif, 1969-</td>
+<td width="15%" class="patFuncDate">2019-12-21</td>
+<td width="25%" class="patFuncDetails">Copy 1</td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh9154036" id="rsh9154036"></td>
+<td width="30%"><a href="/record=b2653992~S58"><span class="patFuncTitleMain">Le meilleur a été découvert loin d'ici / Mélodie Vachon Boucher ; traduction en allemand : Valérie Arsenault.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Vachon Boucher, Mélodie, 1982- artiste</td>
+<td width="15%" class="patFuncDate">2019-12-21</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh9154035" id="rsh9154035"></td>
+<td width="30%"><a href="/record=b2384543~S58"><span class="patFuncTitleMain">Kissinger &amp; nous. 1, La patrie ou la mort, nous vaincrons! / scénario, Ami Vaillancourt ; dessin, Bruno Rouyère</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Vaillancourt, Ami, 1976-</td>
+<td width="15%" class="patFuncDate">2019-12-21</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh9154034" id="rsh9154034"></td>
+<td width="30%"><a href="/record=b2623248~S58"><span class="patFuncTitleMain">Le seigneur de Saint-Rock / [illustrations de] Val Mo ; [texte de] Francis Desharnais.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">ValMO, 1979- artiste</td>
+<td width="15%" class="patFuncDate">2019-12-21</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh8989463" id="rsh8989463"></td>
+<td width="30%"><a href="/record=b2689948~S58"><span class="patFuncTitleMain">Push! : la vie au bout des mains / Tommy Caldwell ; traduit de l'anglais (États-Unis) par Renaud Roussel.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Caldwell, Tommy auteur</td>
+<td width="15%" class="patFuncDate">2019-11-04</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh8778198" id="rsh8778198"></td>
+<td width="30%"><a href="/record=b2700881~S58"><span class="patFuncTitleMain">Le monde a des racines carrées : notions éclectiques pour titiller votre fibre scientifique / Viviane Lalande.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Lalande, Viviane auteur</td>
+<td width="15%" class="patFuncDate">2019-09-04</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh8778197" id="rsh8778197"></td>
+<td width="30%"><a href="/record=b2674328~S58"><span class="patFuncTitleMain">La magie du rangement illustrée / Marie Kondo ; dessins, Yuko Uramoto ; traduction et adaptation, Fabien Vautrin &amp; Maiko_O.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Kondō, Marie, auteur</td>
+<td width="15%" class="patFuncDate">2019-09-04</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh8096553" id="rsh8096553"></td>
+<td width="30%"><a href="/record=b2597671~S58"><span class="patFuncTitleMain">Ariol. 12, Le coq sportif / [texte de] Emmanuel Guibert ; [illustrations de] Marc Boutavant.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Guibert, Emmanuel, 1964-</td>
+<td width="15%" class="patFuncDate">2019-02-16</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7891926" id="rsh7891926"></td>
+<td width="30%"><a href="/record=b2510151~S58"><span class="patFuncTitleMain">L'Algérie, c'est beau comme l'Amérique / [texte de] Olivia Burton ; [illustrations de] Mahi Grand.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Burton, Olivia, 1968-</td>
+<td width="15%" class="patFuncDate">2018-12-16</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7891923" id="rsh7891923"></td>
+<td width="30%"><a href="/record=b2388833~S58"><span class="patFuncTitleMain">L'Amérique, ou, Le disparu / Réal Godbout ; d'après le roman de Frank Kafka.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Godbout, Réal, 1951-</td>
+<td width="15%" class="patFuncDate">2018-12-16</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7891922" id="rsh7891922"></td>
+<td width="30%"><a href="/record=b2630160~S58"><span class="patFuncTitleMain">Jacques Damour / [texte de] Vincent Henry ; [illustrations de] Gaël Henry ; d'après Émile Zola.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Henry, Vincent, 1966- auteur</td>
+<td width="15%" class="patFuncDate">2018-12-16</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7843143" id="rsh7843143"></td>
+<td width="30%"><a href="/record=b2278854~S58"><span class="patFuncTitleMain">Magasin général. 7, Charleston / sur un thème de Régis Loisel ; scénario et dialogues, Régis Loisel &amp; Jean-Louis Tripp ; dessin, Régis Loisel &amp; Jean-Louis Tripp ; adaptation des dialogues en québécois, Jimmy Beaulieu.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Loisel, Régis, 1951-</td>
+<td width="15%" class="patFuncDate">2018-12-02</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7843139" id="rsh7843139"></td>
+<td width="30%"><a href="/record=b2364118~S58"><span class="patFuncTitleMain">Magasin général. 8, Les femmes / sur un thème de Régis Loisel ; scénario et dialogues, Régis Loisel &amp; Jean-Louis Tripp ; dessin, Régis Loisel &amp; Jean-Louis Tripp ; adaptation des dialogues en québécois, Jimmy Beaulieu.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Loisel, Régis, 1951-</td>
+<td width="15%" class="patFuncDate">2018-12-02</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7843138" id="rsh7843138"></td>
+<td width="30%"><a href="/record=b2067181~S58"><span class="patFuncTitleMain">Magasin général. 6, Ernest Latulippe / sur un thème de Régis Loisel ; scénario et dialogues, Régis Loisel &amp; Jean-Louis Tripp ; dessin, Régis Loisel &amp; Jean-Louis Tripp ; adaptation des dialogues en québécois, Jimmy Beaulieu.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Loisel, Régis, 1951-</td>
+<td width="15%" class="patFuncDate">2018-12-02</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7843137" id="rsh7843137"></td>
+<td width="30%"><a href="/record=b1425076~S58"><span class="patFuncTitleMain">Magasin général. 2, Serge / sur un thème de Régis Loisel ; scénario et dialogues, Régis Loisel &amp; Jean-Louis Tripp ; dessin, Régis Loisel &amp; Jean-Louis Tripp ; adaptation des dialogues en québécois, Jimmy Beaulieu.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Loisel, Régis, 1951-</td>
+<td width="15%" class="patFuncDate">2018-12-02</td>
+<td width="25%" class="patFuncDetails">Copy 1</td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7843136" id="rsh7843136"></td>
+<td width="30%"><a href="/record=b2516717~S58"><span class="patFuncTitleMain">L'histoire du Québec pour les nuls / Éric Bédard.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Bédard, Éric, 1969- auteur.</td>
+<td width="15%" class="patFuncDate">2018-12-02</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7843135" id="rsh7843135"></td>
+<td width="30%"><a href="/record=b1421604~S58"><span class="patFuncTitleMain">Deception point : roman / Dan Brown ; traduit de l'anglais (États-Unis) par Daniel Roche.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Brown, Dan, 1964-</td>
+<td width="15%" class="patFuncDate">2018-12-02</td>
+<td width="25%" class="patFuncDetails">Copy 1</td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7654947" id="rsh7654947"></td>
+<td width="30%"><a href="/record=b2674430~S58"><span class="patFuncTitleMain">L'œuvre incomplète d'Amílcar Torpp / André Marois, Pierre Pratt.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Marois, André, 1959- auteur</td>
+<td width="15%" class="patFuncDate">2018-10-06</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7654932" id="rsh7654932"></td>
+<td width="30%"><a href="/record=b1910227~S58"><span class="patFuncTitleMain">Magasin général. 5, Montréal / sur un thème de Régis Loisel ; scénario et dialogues, Régis Loisel &amp; Jean-Louis Tripp ; dessin, Régis Loisel &amp; Jean-Louis Tripp ; adaptation des dialogues en québécois, Jimmy Beaulieu.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Loisel, Régis, 1951-</td>
+<td width="15%" class="patFuncDate">2018-10-06</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7654928" id="rsh7654928"></td>
+<td width="30%"><a href="/record=b1771822~S58"><span class="patFuncTitleMain">Magasin général. 4, Confessions / sur un thème de Régis Loisel ; scénario et dialogues, Régis Loisel &amp; Jean-Louis Tripp ; dessin, Régis Loisel &amp; Jean-Louis Tripp ; adaptation des dialogues en québécois, Jimmy Beaulieu.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Loisel, Régis, 1951-</td>
+<td width="15%" class="patFuncDate">2018-10-06</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7654927" id="rsh7654927"></td>
+<td width="30%"><a href="/record=b1578991~S58"><span class="patFuncTitleMain">Magasin général. 3, Les hommes / sur un thème de Régis Loisel ; scénario et dialogues, Régis Loisel &amp; Jean-Louis Tripp ; dessin, Régis Loisel &amp; Jean-Louis Tripp ; adaptation des dialogues en québécois, Jimmy Beaulieu.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Loisel, Régis, 1951-</td>
+<td width="15%" class="patFuncDate">2018-10-06</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7654924" id="rsh7654924"></td>
+<td width="30%"><a href="/record=b2669715~S58"><span class="patFuncTitleMain">La première. 2, Alex / scénario et dessin, Velm.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Velm, 1988- auteur, artiste</td>
+<td width="15%" class="patFuncDate">2018-10-06</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7349709" id="rsh7349709"></td>
+<td width="30%"><a href="/record=b2335183~S58"><span class="patFuncTitleMain">Geronimo Stilton. 7, Stilton, les Olympiques sont en danger! / Geronimo Stilton ; [thème et scénario de Leonardo Favia ; illustrations, Federica Salfo ; traduction par Claude Dubois].</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Stilton, Geronimo</td>
+<td width="15%" class="patFuncDate">2018-07-07</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7349699" id="rsh7349699"></td>
+<td width="30%"><a href="/record=b2180066~S58"><span class="patFuncTitleMain">Geronimo Stilton. 5, Le géant de glace / Geronimo Stilton ; [illustrations, Wasabi! Studio ; basé sur l'idée originale d'Elisabetta Dami ; traduction par Claude Dubois].</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Stilton, Geronimo</td>
+<td width="15%" class="patFuncDate">2018-07-07</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7349686" id="rsh7349686"></td>
+<td width="30%"><a href="/record=b2180066~S58"><span class="patFuncTitleMain">Geronimo Stilton. 5, Le géant de glace / Geronimo Stilton ; [illustrations, Wasabi! Studio ; basé sur l'idée originale d'Elisabetta Dami ; traduction par Claude Dubois].</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Stilton, Geronimo</td>
+<td width="15%" class="patFuncDate">2018-07-07</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7349674" id="rsh7349674"></td>
+<td width="30%"><a href="/record=b2456520~S58"><span class="patFuncTitleMain">Geronimo Stilton. 13, Le train le plus rapide du Far West / Geronimo Stilton ; [scénario de Leonardo Favia ; illustrations, Ennio Bufi ; traduction par Claude Dubois].</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Stilton, Geronimo</td>
+<td width="15%" class="patFuncDate">2018-07-07</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7349672" id="rsh7349672"></td>
+<td width="30%"><a href="/record=b2068570~S58"><span class="patFuncTitleMain">Geronimo Stilton. 3, Le secret du Sphinx / Geronimo Stilton ; [illustrations de Gianluigi Fungo ; basé sur l'idée originale d'Elisabetta Dami ; traduction par Jacinthe Laforte et Jessica Hébert-Mathieu].</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Stilton, Geronimo</td>
+<td width="15%" class="patFuncDate">2018-07-07</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7349671" id="rsh7349671"></td>
+<td width="30%"><a href="/record=b1984060~S58"><span class="patFuncTitleMain">Geronimo Stilton. 2, L'imposteur du Colisée / Geronimo Stilton ; [illustrations par Wasabi! Studio ; basé sur l'idée originale d'Elisabetta Dami ; traduction par Emily Gervais et Jessica Hébert-Mathieu].</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Stilton, Geronimo</td>
+<td width="15%" class="patFuncDate">2018-07-07</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7349668" id="rsh7349668"></td>
+<td width="30%"><a href="/record=b2419148~S58"><span class="patFuncTitleMain">Geronimo Stilton. 11, Le mystère de la tour Eiffel / Geronimo Stilton ; [scénario de Leonardo Favia ; illustrations, Ennio Bufi ; traduction par Claude Dubois].</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Stilton, Geronimo</td>
+<td width="15%" class="patFuncDate">2018-07-07</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7349652" id="rsh7349652"></td>
+<td width="30%"><a href="/record=b2499987~S58"><span class="patFuncTitleMain">Le trésor englouti / [d'après l'oeuvre originale de Yvan Pommaux] ; [texte de] Frédéric Rosset ; [illustrations de] Louis Alloing.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Rosset, Frédéric</td>
+<td width="15%" class="patFuncDate">2018-07-07</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7349651" id="rsh7349651"></td>
+<td width="30%"><a href="/record=b2548522~S58"><span class="patFuncTitleMain">Jaloux? Pas du tout! / [d'après l'oeuvre originale de] Yvan Pommaux ; [texte de] Pascale Bouchié, Frédéric Rosset ; [illustrations de] Louis Alloing.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Bouchié, Pascale</td>
+<td width="15%" class="patFuncDate">2018-07-07</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7349650" id="rsh7349650"></td>
+<td width="30%"><a href="/record=b2379670~S58"><span class="patFuncTitleMain">Ariol. 2, Le chevalier Cheval / [texte de] Emmanuel Guibert ; [illustrations de] Marc Boutavant.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Guibert, Emmanuel, 1964-</td>
+<td width="15%" class="patFuncDate">2018-07-07</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7349648" id="rsh7349648"></td>
+<td width="30%"><a href="/record=b2451841~S58"><span class="patFuncTitleMain">Ariol. 9, Les dents du lapin / [texte de] Emmanuel Guibert ; [illustrations de] Marc Boutavant.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Guibert, Emmanuel, 1964-</td>
+<td width="15%" class="patFuncDate">2018-07-07</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7270732" id="rsh7270732"></td>
+<td width="30%"><a href="/record=b2523914~S58"><span class="patFuncTitleMain">Mermaid project. 4 / scénario et dialogues, Leo et Corine Jamar ; dessin, Fred Simon.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-06-12</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7270730" id="rsh7270730"></td>
+<td width="30%"><a href="/record=b2612624~S58"><span class="patFuncTitleMain">Mermaid project. 5 / scénario et dialogues, Leo et Corine Jamar ; dessin, Fred Simon.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-06-12</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7263700" id="rsh7263700"></td>
+<td width="30%"><a href="/record=b2116216~S58"><span class="patFuncTitleMain">Momentum / Patrick de Friberg.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Friberg, Patrick de, 1964-</td>
+<td width="15%" class="patFuncDate">2018-06-09</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7263687" id="rsh7263687"></td>
+<td width="30%"><a href="/record=b1309354~S58"><span class="patFuncTitleMain">La mort dans l'âme / Maxime Houde.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Houde, Maxime, 1973-</td>
+<td width="15%" class="patFuncDate">2018-06-09</td>
+<td width="25%" class="patFuncDetails">Copy 1</td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7197377" id="rsh7197377"></td>
+<td width="30%"><a href="/record=b2417098~S58"><span class="patFuncTitleMain">Namibia. 4 / scénario, découpage &amp; dialogues, Léo &amp; Rodolphe ; dessin, Marchal.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-05-20</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+
+<!-- BEGIN BOTTOM HISTORY PAGER -->
+<!-- begin page widgit -->
+<tr class="browsePager"><td style="text-align:center" class="browsePager" colspan="5">
+
+Result Page&nbsp;&nbsp;&nbsp;<strong>1</strong>
+<a href="readinghistory&amp;page=2">2</a>
+<a href="readinghistory&amp;page=3">3</a>
+<a href="readinghistory&amp;page=4">4</a>
+<a href="readinghistory&amp;page=2"><img src="/screens/bib_paging_next.gif" alt="Next page" align="bottom" border="0"></a>
+<!-- end page widgit -->
+</td>
+</tr>
+<!-- END BOTTOM HISTORY PAGER -->
+</tbody></table>
+<!-- END READING HISTORY TABLE -->
+<a href="/patroninfo~S58/2423460/readinghistory/rsh" onclick="return removecheckedconfirm(PHISTORYFORM,'/patroninfo~S58/2423460/readinghistory/rsh','The marked items will be irreversibly deleted.  Proceed?',0)"><img src="/screens/pat_delete_marked.gif" class="button" border="0" alt="Delete Marked"></a>
+<a href="/patroninfo~S58/2423460/readinghistory/rah" onclick="return removeallconfirm(PHISTORYFORM,'/patroninfo~S58/2423460/readinghistory/rah','Your entire reading history will be irreversibly deleted.  Proceed?',0)"><img src="/screens/pat_delete_all.gif" class="button" border="0" alt="Delete All"></a>
+<a href="/patroninfo~S58/2423460/readinghistory" onclick="return replace_or_redraw('/patroninfo~S58/2423460/readinghistory' + '?export=true')"><img src="/screens/export_readinglist.gif" class="button" border="0" alt="Export reading history"></a>
+<a href="/patroninfo~S58/2423460/readinghistory/OptOut"><img src="/screens/reading_history_optout.gif" class="button" border="0" alt="Disable your reading history"></a>
+</form>
+</div>
+</td>
+<td>&nbsp;</td>
+</tr>
+</tbody></table>
+
+
+<br>
+<!------ Fin de la page ----->
+</td></tr>
+
+</tbody></table>
+<table width="780" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+<tbody><tr height="23">
+<td background="/screens/fond-bas-page.gif" colspan="2">&nbsp;
+</td>
+</tr>
+<tr>
+<td width="20">&nbsp;</td>
+<td class="main-credit">
+Nelligan banner: <br>
+<b>Roseline Granet</b>, <i>Monument à Émile Nelligan</i> (2005).<br>
+Saint-Louis Square, Plateau-Mont-Royal Borough, ©Ville de Montréal 2006. <br><br><br>
+</td>
+</tr>
+</tbody></table>
+
+
+
+
+
+
+
+</span></center></body></html>

@@ -1,0 +1,649 @@
+<html dir="LTR"><head>
+<link rel="stylesheet" type="text/css" href="/scripts/ProStyles.css">
+<link rel="stylesheet" type="text/css" href="/screens/ProStyles.css">
+<script type="text/javascript" src="/scripts/elcontent.js">
+</script>
+<script type="text/javascript" src="/scripts/common.js">
+</script>
+</head>
+<body onload="document.forms[1].elements[1].focus();" bgcolor="#FFFFFF" background="/screens/fond.gif">
+
+<!--Debut de la partie logo du haut-->
+
+
+<title>RESEAU DES BIBLIOTHEQUES DE MONTREAL - Kovar                              / All</title>
+<base target="_self">
+<link rel="stylesheet" type="text/css" href="/scripts/ProStyles.css">
+<link rel="stylesheet" type="text/css" href="/screens/ProStyles.css">
+<link rel="shortcut icon" type="ximage/icon" href="/screens/favicon.ico">
+<script type="text/javascript" src="/scripts/common.js">
+</script>
+<script type="text/javascript" src="/scripts/elcontent.js">
+</script>
+
+<script type="text/javascript" src="/screens/bibdisplay.js"></script><script type="text/javascript" src="/screens/brief.js"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-25478931-21"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-25478931-21');</script>
+
+
+<!-- Toutes les collections Réseau : Secteurs adultes et jeunes ---->
+<!-- Silver Version, last changed: 1 September, 2004 -->
+<center>
+<span style="position:relative; top: 0px; left:0px; width: 780px">
+<a href="http://ville.montreal.qc.ca/english" target="_blank"><img src="/screens/logo-ville.gif" border="0" alt="Montréal"></a><img src="/screens/l01-ver-g.gif" border="0" alt=""><a href="/search"><img src="/screens/bout-home.gif" border="0" alt="Home"></a><a href="/patroninfo/?"><img src="/screens/bout-account.gif" border="0" alt="My Account"></a><a href="/screens/help_index.html"><img src="/screens/bout-help.gif" alt="Help" border="0"></a><img src="/screens/bout-vide-2.gif" border="0"><img src="/screens/bout-vide-1.gif" border="0" alt=""><img src="/screens/bout-z3950.gif" border="0" alt=""><img src="/screens/bout-vide.gif" border="0"><a href="/search*frc"><img src="/screens/bout-francais.gif" border="0" alt="Version française"></a><br><a href="http://ville.montreal.qc.ca/biblio" target="_top"><img src="/screens/logo-biblio.gif" border="0" alt="Site Web du Réseau des bibliothèques publiques de Montréal"></a><!--<a href="http://ville.montreal.qc.ca/pls/portal/url/page/biblio_en/accueil" target="_top"><img src="/screens/logo-biblio-en.gif" border=0 alt="Montr&eacute;al Public Libraries network"></a>--><img src="/screens/l02-ver-g.gif" border="0" alt=""><img src="/screens/en-bi-txt-58.gif" border="0" alt="Nelligan Catalogue : All the collections –  Adult and Children's"><img src="/screens/bi-reseau.gif" border="0" alt="">
+<table background="/screens/fond-sous-bi-y270.gif" cellspacing="0" cellpadding="0" width="780" border="0">
+<tbody><tr><td>
+<!-- Fin du fichier logo du haut---->
+
+<br>
+<script type="text/JavaScript">
+<!-- Hide the JS
+startTimeout(1200000, "/");
+// -->
+</script>
+<div id="TimeoutPopup" tabindex="0" class="modal" onkeypress="refreshSession(event)">
+<div class="modal-content">
+Your session will expire automatically in <span id="TimeoutSeconds">0</span> seconds.<br>
+<br>
+<button id="CancelTimeout" onclick="refreshSession()">Continue session</button>
+<button id="DoTimeout" onclick="endSession()">End session now</button></div>
+</div>
+<noscript>
+&lt;meta http-equiv="Refresh" content="1200;URL=/" /&gt;
+</noscript>
+<br>
+<!--this is customized <screens/patronview_web_s58.html>-->
+<!--Fin de la partie logo du haut-->
+
+<table width="780" border="0" cellspacing="0" cellpadding="4">
+<tbody><tr valign="top">
+<td width="10">&nbsp;</td>
+<td align="left" width="75">
+<!----- Bouton : Fermer la session ----->
+<form>
+<a href="/logout~S58?" target="_self"><img src="/screens/logout.gif" alt="Log Out" border="0"></a>
+<br>
+</form>
+</td>
+<td class="pat-titre" width="245" align="left">
+<!----- Nom de l'usager ----->
+<strong>%USERNAME%</strong><br>
+</td>
+<td class="pageMainArea" align="left" width="440">
+<!----- Zone de recherche ---->
+<img src="/screens/en-dossier-recherche.gif" border="0" alt="Search by keyword(s)"><br>
+<form class="unpadded" action="/search/a?a" name="Recherche" id="search">
+<input maxlength="3" name="searchtype" type="hidden" value="Y">
+<!-- ----- Zone de saisie ----- -->
+<input maxlength="75" name="searcharg" size="38" class="main-biblio"><input maxlength="3" name="searchscope" type="hidden" value="58">
+<!-- ------ Colonne 3 : Bouton Search  -------->
+<input type="hidden" name="SORT" value="D"><input type="hidden" name="extended" value="0">
+<input type="image" value="Chercher" name="submit" src="/screens/go_but_frc.gif" border="0" align="middle" alt="Search">
+</form>
+</td>
+<td width="10">&nbsp;</td>
+</tr>
+<tr>
+<td width="10">&nbsp;</td>
+<td width="320" class="main-s-titre" colspan="2">
+MY ACCOUNT
+</td>
+<td class="main-s-titre" align="left">
+CURRENT TRANSACTION(S)
+</td>
+<td width="10">&nbsp;</td>
+</tr>
+</tbody></table>
+
+
+
+<table background="/screens/fond-ligne-gauche.gif" width="780" border="0" cellspacing="0" cellpadding="4" align="center">
+<tbody><tr valign="top">
+<td width="10">&nbsp;</td>
+<td width="320" class="pat-titre">
+<strong>Modify :</strong>
+<br>
+<!----- Bouton : Mot de passe ----->
+<a href="#" onclick="return open_new_window( '/patroninfo~S58/2423460/newpin' )"><img src="/screens/pat_pin.gif" alt="Modify your PIN" border="0"></a>
+<!----- Bouton : Informations personnelles ----->
+<a href="#" onclick="return open_new_window( '/patroninfo~S58/2423460/modpinfo' )"><img src="/screens/pat_info.gif" alt="Modify Personal Information" border="0"></a>
+<br><br>
+<strong>View :</strong>
+<br>
+<!----- Bouton : Message de la bibliotheque ----->
+<!----- Bouton : Vos recherches favorites ----->
+<a href="/patroninfo~S58/2423460/getpsearches" target="_self"><img src="/screens/pat_getpsavedrecs.gif" alt="Preferred Searches" border="0"></a>
+<!----- Bouton : Historique de lecture ----->
+<!----- Bouton : Liste a lire ou coups de coeur ----->
+<a href="/patroninfo~S58/2423460/mylists" target="_self"><img src="/screens/my_lists.gif" alt="Your Wish Lists" border="0"></a>
+<br>
+</td>
+
+<td width="440" bgcolor="#ECEFF0" class="pat-titre">
+<br> <br>
+<!----- Reservations en cours ----->
+
+
+<!----- Amendes en cours ----->
+
+<!----- Pret en cours ----->
+<br>
+Loan :
+<span class="pat-transac">
+&nbsp;
+<a href="/patroninfo~S58/2423460/items" target="_self">10 Items currently checked out</a>
+<br>
+</span>
+
+
+<!----- ???  ----->
+<!--<!--{ifbookings}---->
+<!--<!--{bookingsbtn}---->
+<!--<!--{xif}---->
+</td>
+<td width="10">&nbsp;</td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+<td colspan="2">
+<!----- Probablement pour la photo de l'usager ----->
+<!--<!--{ifpatimage}---->
+<!--<!--{patimage}---->
+<!--<!--{xif}---->
+
+<!----- Bouton : My Millennium searching ----->
+<!--<!--{ifmymil}---->
+<!--<!--{searchbtn}---->
+<!--<!--{xif}---->
+<hr color="#990000">
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td colspan="2">
+<div class="patFuncArea">
+<!-- BEGIN READING HISTORY TABLE -->
+<form name="PHISTORYFORM" method="GET">
+<a href="/patroninfo~S58/2423460/readinghistory/rsh" onclick="return removecheckedconfirm(PHISTORYFORM,'/patroninfo~S58/2423460/readinghistory/rsh','The marked items will be irreversibly deleted.  Proceed?',0)"><img src="/screens/pat_delete_marked.gif" class="button" border="0" alt="Delete Marked"></a>
+<a href="/patroninfo~S58/2423460/readinghistory/rah" onclick="return removeallconfirm(PHISTORYFORM,'/patroninfo~S58/2423460/readinghistory/rah','Your entire reading history will be irreversibly deleted.  Proceed?',0)"><img src="/screens/pat_delete_all.gif" class="button" border="0" alt="Delete All"></a>
+<a href="/patroninfo~S58/2423460/readinghistory" onclick="return replace_or_redraw('/patroninfo~S58/2423460/readinghistory' + '?export=true')"><img src="/screens/export_readinglist.gif" class="button" border="0" alt="Export reading history"></a>
+<a href="/patroninfo~S58/2423460/readinghistory/OptOut"><img src="/screens/reading_history_optout.gif" class="button" border="0" alt="Disable your reading history"></a>
+<table border="0" class="patFunc">
+<tbody><tr class="patFuncTitle">
+<!-- BEGIN READING HISTORY PAGER -->
+<!-- begin page widgit -->
+</tr><tr class="browsePager"><td style="text-align:center" class="browsePager" colspan="5">
+
+Result Page&nbsp;&nbsp;&nbsp;<a href="readinghistory&amp;page=1"><img src="/screens/bib_paging_prev.gif" alt="Previous page" align="bottom" border="0"></a>
+<a href="readinghistory&amp;page=1">1</a>
+<strong>2</strong>
+<a href="readinghistory&amp;page=3">3</a>
+<a href="readinghistory&amp;page=4">4</a>
+<a href="readinghistory&amp;page=3"><img src="/screens/bib_paging_next.gif" alt="Next page" align="bottom" border="0"></a>
+<!-- end page widgit -->
+</td>
+</tr>
+<!-- END READING PAGER -->
+
+
+<tr class="patFuncTitle"><th colspan="5" class="patFuncTitle">Reading History ( Records 51-100 of 190 )</th>
+</tr>
+<tr class="patFuncHeaders"><th class="patFuncHeaders">Mark</th>
+<th class="patFuncHeaders"><a href="/patroninfo~S58/2423460/readinghistory" onclick="return onClickSubmitCheckedList( PHISTORYFORM, '/patroninfo~S58/2423460/readinghistory', 'sort', 'title', 0)">Title</a></th><th class="patFuncHeaders"><a href="/patroninfo~S58/2423460/readinghistory" onclick="return onClickSubmitCheckedList( PHISTORYFORM, '/patroninfo~S58/2423460/readinghistory', 'sort', 'author', 0)">Author</a></th><th class="patFuncHeaders"><span class="sortSelected">Checked Out</span></th>
+<th class="patFuncHeaders"><a href="/patroninfo~S58/2423460/readinghistory" onclick="return onClickSubmitCheckedList( PHISTORYFORM, '/patroninfo~S58/2423460/readinghistory', 'sort', 'details', 0)">Details</a></th></tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7197376" id="rsh7197376"></td>
+<td width="30%"><a href="/record=b2498922~S58"><span class="patFuncTitleMain">Namibia. 5 / scénario, découpage &amp; dialogues, Léo &amp; Rodolphe ; dessin, Marchal.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-05-20</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7197375" id="rsh7197375"></td>
+<td width="30%"><a href="/record=b2622373~S58"><span class="patFuncTitleMain">Survivants. 5 : anomalies quantiques / Leo.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-05-20</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7197374" id="rsh7197374"></td>
+<td width="30%"><a href="/record=b2355535~S58"><span class="patFuncTitleMain">Mermaid project. 1 / scénario et dialogues, Leo et Corine Jamar ; dessin, Fred Simon.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-05-20</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7197373" id="rsh7197373"></td>
+<td width="30%"><a href="/record=b2408942~S58"><span class="patFuncTitleMain">Mermaid project. 2 / scénario et dialogues, Leo et Corine Jamar ; dessin, Fred Simon.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-05-20</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7197372" id="rsh7197372"></td>
+<td width="30%"><a href="/record=b2467419~S58"><span class="patFuncTitleMain">Mermaid project. 3 / scénario et dialogues, Leo et Corine Jamar ; dessin, Fred Simon.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-05-20</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7197371" id="rsh7197371"></td>
+<td width="30%"><a href="/record=b2671729~S58"><span class="patFuncTitleMain">Trafic fatal / Élizabeth Turgeon.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Turgeon, Elizabeth, 1951- auteur.</td>
+<td width="15%" class="patFuncDate">2018-05-20</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7151426" id="rsh7151426"></td>
+<td width="30%"><a href="/record=b2664546~S58"><span class="patFuncTitleMain">Axolot. Volume 4 : histoires extraordinaires &amp; sources d'étonnement / [présentées par] Patrick Baud.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor"></td>
+<td width="15%" class="patFuncDate">2018-05-06</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7151424" id="rsh7151424"></td>
+<td width="30%"><a href="/record=b2115062~S58"><span class="patFuncTitleMain">Survivants. 1 : anomalies quantiques / Leo.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-05-06</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7151423" id="rsh7151423"></td>
+<td width="30%"><a href="/record=b2359510~S58"><span class="patFuncTitleMain">Survivants. 2 : anomalies quantiques / Leo.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-05-06</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7151422" id="rsh7151422"></td>
+<td width="30%"><a href="/record=b2475421~S58"><span class="patFuncTitleMain">Survivants. 3 : anomalies quantiques / Leo.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-05-06</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7151421" id="rsh7151421"></td>
+<td width="30%"><a href="/record=b2564558~S58"><span class="patFuncTitleMain">Survivants. 4 : anomalies quantiques / Leo.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-05-06</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7151420" id="rsh7151420"></td>
+<td width="30%"><a href="/record=b2112390~S58"><span class="patFuncTitleMain">Conventum / Pascal Girard.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Girard, Pascal, 1981-</td>
+<td width="15%" class="patFuncDate">2018-05-06</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7130494" id="rsh7130494"></td>
+<td width="30%"><a href="/record=b1063192~S58"><span class="patFuncTitleMain">Cosmos / Carl Sagan ; trad. de l'américain par Dominique Peters et Marie-Hélène Dumas.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Sagan, Carl, 1934-1996.</td>
+<td width="15%" class="patFuncDate">2018-04-30</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7130493" id="rsh7130493"></td>
+<td width="30%"><a href="/record=b2503570~S58"><span class="patFuncTitleMain">Centaurus. 1, Terre promise / scénario, Léo &amp; Rodolphe ; dessin, Zoran Janjetov.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-04-30</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7127583" id="rsh7127583"></td>
+<td width="30%"><a href="/record=b1278980~S58"><span class="patFuncTitleMain">Betelgeuse. 1, La planète / Léo.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-04-29</td>
+<td width="25%" class="patFuncDetails">Copy 1</td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7127581" id="rsh7127581"></td>
+<td width="30%"><a href="/record=b1279011~S58"><span class="patFuncTitleMain">Betelgeuse. 2, Les survivants / Léo.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-04-29</td>
+<td width="25%" class="patFuncDetails">Copy 1</td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7127579" id="rsh7127579"></td>
+<td width="30%"><a href="/record=b1405110~S58"><span class="patFuncTitleMain">Betelgeuse. 5, L'autre / Léo.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-04-29</td>
+<td width="25%" class="patFuncDetails">Copy 1</td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7127554" id="rsh7127554"></td>
+<td width="30%"><a href="/record=b1463533~S58"><span class="patFuncTitleMain">Antares. 1, Épisode 1 / Léo.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-04-29</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7127553" id="rsh7127553"></td>
+<td width="30%"><a href="/record=b1818448~S58"><span class="patFuncTitleMain">Antares. 2 / Léo.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-04-29</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7127552" id="rsh7127552"></td>
+<td width="30%"><a href="/record=b2269043~S58"><span class="patFuncTitleMain">Antares. 4 / Léo.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-04-29</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7127549" id="rsh7127549"></td>
+<td width="30%"><a href="/record=b2424516~S58"><span class="patFuncTitleMain">Antares. 5 / Léo.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-04-29</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7127546" id="rsh7127546"></td>
+<td width="30%"><a href="/record=b2522490~S58"><span class="patFuncTitleMain">Antares. 6 / Léo.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-04-29</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7097660" id="rsh7097660"></td>
+<td width="30%"><a href="/record=b1233570~S58"><span class="patFuncTitleMain">Aldebaran. 2, La Blonde / Léo.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-04-21</td>
+<td width="25%" class="patFuncDetails">Copy 1</td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7097653" id="rsh7097653"></td>
+<td width="30%"><a href="/record=b1268091~S58"><span class="patFuncTitleMain">Aldebaran. 4, Le groupe / Léo.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-04-21</td>
+<td width="25%" class="patFuncDetails">Copy 1</td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7097650" id="rsh7097650"></td>
+<td width="30%"><a href="/record=b1233624~S58"><span class="patFuncTitleMain">Aldebaran. 3, La photo / Léo.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-04-21</td>
+<td width="25%" class="patFuncDetails">Copy 1</td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7097644" id="rsh7097644"></td>
+<td width="30%"><a href="/record=b2583339~S58"><span class="patFuncTitleMain">Amazonie. 1 / scénario, découpage &amp; dialogues, Leo &amp; Rodolphe ; dessin, Marchal.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-04-21</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7097636" id="rsh7097636"></td>
+<td width="30%"><a href="/record=b1754767~S58"><span class="patFuncTitleMain">Aldebaran. 5, La créature / Léo.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-04-21</td>
+<td width="25%" class="patFuncDetails">Copy 1</td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7087419" id="rsh7087419"></td>
+<td width="30%"><a href="/record=b2504235~S58"><span class="patFuncTitleMain">75 exercices thérapeutiques pour la future et nouvelle maman : prévenir et soulager les douleurs et l'inconfort liés à la grossesse et à la période postnatale / Emilie Fecteau.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Fecteau, Emilie auteur.</td>
+<td width="15%" class="patFuncDate">2018-04-18</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7075119" id="rsh7075119"></td>
+<td width="30%"><a href="/record=b2320834~S58"><span class="patFuncTitleMain">Alice au pays des merveilles / Geronimo Stilton ; [illustrations d'Andrea Denegri ; traduction de Béatrice Didiot].</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Stilton, Geronimo</td>
+<td width="15%" class="patFuncDate">2018-04-14</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7075118" id="rsh7075118"></td>
+<td width="30%"><a href="/record=b2583675~S58"><span class="patFuncTitleMain">Gare au gonfiosaure puant! / Geronimo Stilton ; illustrations intérieures de Giuseppe Facciotto ; traduction de Jean-Claude Béhar.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Stilton, Geronimo auteur</td>
+<td width="15%" class="patFuncDate">2018-04-14</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7075068" id="rsh7075068"></td>
+<td width="30%"><a href="/record=b1422026~S58"><span class="patFuncTitleMain">Kenya. 4, Interventions / scénario &amp; dessin, Leo ; scénario, découpage &amp; dialogues, Rodolphe.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-04-14</td>
+<td width="25%" class="patFuncDetails">Copy 1</td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7075066" id="rsh7075066"></td>
+<td width="30%"><a href="/record=b1372914~S58"><span class="patFuncTitleMain">Kenya. 3, Aberrations / scénario &amp; dessin, Léo ; scénario, découpage &amp; dialogues, Rodolphe</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-04-14</td>
+<td width="25%" class="patFuncDetails">Copy 1</td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7075059" id="rsh7075059"></td>
+<td width="30%"><a href="/record=b1611010~S58"><span class="patFuncTitleMain">Kenya. 5, Illusions / scénario &amp; dessin, Leo ; scénario, découpages &amp; dialogues, Rodolphe.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-04-14</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7075057" id="rsh7075057"></td>
+<td width="30%"><a href="/record=b2324545~S58"><span class="patFuncTitleMain">Namibia. 3 / scénario, découpage &amp; dialogues, Léo &amp; Rodolphe ; dessin, Marchal.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-04-14</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7075055" id="rsh7075055"></td>
+<td width="30%"><a href="/record=b1928037~S58"><span class="patFuncTitleMain">Namibia. 1 / scénario, découpage &amp; dialogues, Léo &amp; Rodolphe ; dessin, Marchal.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-04-14</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7075051" id="rsh7075051"></td>
+<td width="30%"><a href="/record=b2070531~S58"><span class="patFuncTitleMain">Namibia. 2 / scénario, découpage &amp; dialogues, Léo &amp; Rodolphe ; dessin, Marchal.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-04-14</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7075049" id="rsh7075049"></td>
+<td width="30%"><a href="/record=b2417098~S58"><span class="patFuncTitleMain">Namibia. 4 / scénario, découpage &amp; dialogues, Léo &amp; Rodolphe ; dessin, Marchal.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-04-14</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7075044" id="rsh7075044"></td>
+<td width="30%"><a href="/record=b2498922~S58"><span class="patFuncTitleMain">Namibia. 5 / scénario, découpage &amp; dialogues, Léo &amp; Rodolphe ; dessin, Marchal.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-04-14</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7047081" id="rsh7047081"></td>
+<td width="30%"><a href="/record=b2390919~S58"><span class="patFuncTitleMain">Sélection Archie [Marc-Favreau]</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor"></td>
+<td width="15%" class="patFuncDate">2018-04-07</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7046995" id="rsh7046995"></td>
+<td width="30%"><a href="/record=b1610657~S58"><span class="patFuncTitleMain">Énigme aux Jeux olympiques / Geronimo Stilton ; [illustrations de Cinzia Marrese ... et al. ; traduction de Titi Plumederat].</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Stilton, Geronimo</td>
+<td width="15%" class="patFuncDate">2018-04-07</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7046993" id="rsh7046993"></td>
+<td width="30%"><a href="/record=b2352762~S58"><span class="patFuncTitleMain">Robinson Crusoé / Geronimo Stilton ; [illustrations, Elisabetta Giulivi ... et al. ; traduction de Béatrice Didiot].</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Stilton, Geronimo</td>
+<td width="15%" class="patFuncDate">2018-04-07</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7046990" id="rsh7046990"></td>
+<td width="30%"><a href="/record=b2391780~S58"><span class="patFuncTitleMain">Sélection Betty et Véronica [Marc-Favreau]</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor"></td>
+<td width="15%" class="patFuncDate">2018-04-07</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7046987" id="rsh7046987"></td>
+<td width="30%"><a href="/record=b2391780~S58"><span class="patFuncTitleMain">Sélection Betty et Véronica [Marc-Favreau]</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor"></td>
+<td width="15%" class="patFuncDate">2018-04-07</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7046986" id="rsh7046986"></td>
+<td width="30%"><a href="/record=b2391780~S58"><span class="patFuncTitleMain">Sélection Betty et Véronica [Marc-Favreau]</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor"></td>
+<td width="15%" class="patFuncDate">2018-04-07</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7046985" id="rsh7046985"></td>
+<td width="30%"><a href="/record=b2473245~S58"><span class="patFuncTitleMain">Le trésor de Piratrouk le piraton / Geronimo Stilton ; [illustrations de Giuseppe Facciotto ; traduction de Jean-Claude Béhar].</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Stilton, Geronimo</td>
+<td width="15%" class="patFuncDate">2018-04-07</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7046732" id="rsh7046732"></td>
+<td width="30%"><a href="/record=b1338973~S58"><span class="patFuncTitleMain">Kenya. 2, Rencontres / scénario &amp; dessins, Léo ; scénario, découpage &amp; dialogues, Rodolphe</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-04-07</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7046731" id="rsh7046731"></td>
+<td width="30%"><a href="/record=b1293912~S58"><span class="patFuncTitleMain">Kenya. 1, Apparitions / scénario &amp; dessin, Léo ; scénario, découpage &amp; dialogues, Rodolphe.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Léo, 1944-</td>
+<td width="15%" class="patFuncDate">2018-04-07</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7046730" id="rsh7046730"></td>
+<td width="30%"><a href="/record=b2407095~S58"><span class="patFuncTitleMain">Le printemps des arabes / un récit de Jean-Pierre Filiu ; dessin de Cyrille Pomes.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Filiu, Jean-Pierre, 1961-</td>
+<td width="15%" class="patFuncDate">2018-04-07</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7046729" id="rsh7046729"></td>
+<td width="30%"><a href="/record=b2638650~S58"><span class="patFuncTitleMain">Le ferry / Mats Strandberg ; traduit du suédois par Hélène Hervieu.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Strandberg, Mats, 1976- auteur.</td>
+<td width="15%" class="patFuncDate">2018-04-07</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+<tr class="patFuncEntry">
+<td width="10%" class="patFuncMark"><input type="checkbox" name="rsh7046728" id="rsh7046728"></td>
+<td width="30%"><a href="/record=b1430494~S58"><span class="patFuncTitleMain">Chroniques des atomes et des galaxies / Hubert Reeves.</span></a>&nbsp;
+</td>
+<td width="20%" class="patFuncAuthor">Reeves, Hubert, 1932-</td>
+<td width="15%" class="patFuncDate">2018-04-07</td>
+<td width="25%" class="patFuncDetails"></td>
+</tr>
+
+<!-- BEGIN BOTTOM HISTORY PAGER -->
+<!-- begin page widgit -->
+<tr class="browsePager"><td style="text-align:center" class="browsePager" colspan="5">
+
+Result Page&nbsp;&nbsp;&nbsp;<a href="readinghistory&amp;page=1"><img src="/screens/bib_paging_prev.gif" alt="Previous page" align="bottom" border="0"></a>
+<a href="readinghistory&amp;page=1">1</a>
+<strong>2</strong>
+<a href="readinghistory&amp;page=3">3</a>
+<a href="readinghistory&amp;page=4">4</a>
+<a href="readinghistory&amp;page=3"><img src="/screens/bib_paging_next.gif" alt="Next page" align="bottom" border="0"></a>
+<!-- end page widgit -->
+</td>
+</tr>
+<!-- END BOTTOM HISTORY PAGER -->
+</tbody></table>
+<!-- END READING HISTORY TABLE -->
+<a href="/patroninfo~S58/2423460/readinghistory/rsh" onclick="return removecheckedconfirm(PHISTORYFORM,'/patroninfo~S58/2423460/readinghistory/rsh','The marked items will be irreversibly deleted.  Proceed?',0)"><img src="/screens/pat_delete_marked.gif" class="button" border="0" alt="Delete Marked"></a>
+<a href="/patroninfo~S58/2423460/readinghistory/rah" onclick="return removeallconfirm(PHISTORYFORM,'/patroninfo~S58/2423460/readinghistory/rah','Your entire reading history will be irreversibly deleted.  Proceed?',0)"><img src="/screens/pat_delete_all.gif" class="button" border="0" alt="Delete All"></a>
+<a href="/patroninfo~S58/2423460/readinghistory" onclick="return replace_or_redraw('/patroninfo~S58/2423460/readinghistory' + '?export=true')"><img src="/screens/export_readinglist.gif" class="button" border="0" alt="Export reading history"></a>
+<a href="/patroninfo~S58/2423460/readinghistory/OptOut"><img src="/screens/reading_history_optout.gif" class="button" border="0" alt="Disable your reading history"></a>
+</form>
+</div>
+</td>
+<td>&nbsp;</td>
+</tr>
+</tbody></table>
+
+
+<br>
+<!------ Fin de la page ----->
+</td></tr>
+
+</tbody></table>
+<table width="780" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+<tbody><tr height="23">
+<td background="/screens/fond-bas-page.gif" colspan="2">&nbsp;
+</td>
+</tr>
+<tr>
+<td width="20">&nbsp;</td>
+<td class="main-credit">
+Nelligan banner: <br>
+<b>Roseline Granet</b>, <i>Monument à Émile Nelligan</i> (2005).<br>
+Saint-Louis Square, Plateau-Mont-Royal Borough, ©Ville de Montréal 2006. <br><br><br>
+</td>
+</tr>
+</tbody></table>
+
+
+
+
+
+
+
+</span></center></body></html>

@@ -1,0 +1,260 @@
+<!-- Rel 2007 "Skyline" Example Set -->
+<!-- This File Last Changed: 15 February 2008 -->
+
+<head>
+<link rel="stylesheet" type="text/css" href="/scripts/ProStyles.css" />
+<link rel="stylesheet" type="text/css" href="/screens/ProStyles.css" />
+<script type="text/javascript" src="/scripts/elcontent.js">
+</script>
+<script type="text/javascript" src="/scripts/common.js">
+</script>
+</head>
+<body onLoad="document.forms[1].elements[1].focus();">
+
+<!--Debut de la partie logo du haut-->
+<html   dir="LTR">
+<head>
+<title>RESEAU DES BIBLIOTHEQUES DE MONTREAL - Kovar                              / All</title>
+<base target="_self"/>
+<link rel="stylesheet" type="text/css" href="/scripts/ProStyles.css" />
+<link rel="stylesheet" type="text/css" href="/screens/ProStyles.css" />
+<link rel="shortcut icon" type="ximage/icon" href="/screens/favicon.ico" />
+<script type="text/javascript" src="/scripts/common.js">
+</script>
+<script type="text/javascript" src="/scripts/elcontent.js">
+</script>
+
+<script type="text/javascript" src="/screens/bibdisplay.js"></script><script type="text/javascript" src="/screens/brief.js"></script><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-25478931-21"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-25478931-21');</script>
+</head>
+<body bgcolor="#FFFFFF" >
+<!-- Toutes les collections Réseau : Secteurs adultes et jeunes ---->
+<!-- Silver Version, last changed: 1 September, 2004 -->
+<body background="/screens/fond.gif"><center>
+<span style="position:relative; top: 0px; left:0px; width: 780px">
+<a href="http://ville.montreal.qc.ca/english" target="_blank"><img src="/screens/logo-ville.gif" border=0 alt="Montr&eacute;al"></a><img src="/screens/l01-ver-g.gif" border=0 alt=""><a href="/search"><img src="/screens/bout-home.gif" border=0 alt="Home"></a><a href="/patroninfo/?"><img src="/screens/bout-account.gif" border=0 alt="My Account"></a><a href="/screens/help_index.html"><img src="/screens/bout-help.gif" alt="Help" border=0></a><img src="/screens/bout-vide-2.gif" border=0><img src="/screens/bout-vide-1.gif" border=0 alt=""><img src="/screens/bout-z3950.gif" border=0 alt=""><img src="/screens/bout-vide.gif" border=0><a href="/search*frc"><img src="/screens/bout-francais.gif" border=0 alt="Version fran&ccedil;aise"></a><br /><a href="http://ville.montreal.qc.ca/biblio" target="_top"><img src="/screens/logo-biblio.gif" border=0 alt="Site Web du R&eacute;seau des biblioth&egrave;ques publiques de Montr&eacute;al"></a><!--<a href="http://ville.montreal.qc.ca/pls/portal/url/page/biblio_en/accueil" target="_top"><img src="/screens/logo-biblio-en.gif" border=0 alt="Montr&eacute;al Public Libraries network"></a>--><img src="/screens/l02-ver-g.gif" border=0 alt=""><img src="/screens/en-bi-txt-58.gif" border=0 alt="Nelligan Catalogue : All the collections &#150;  Adult and Children's"><img src="/screens/bi-reseau.gif" border=0 alt="">
+<table background="/screens/fond-sous-bi-y270.gif" cellspacing="0" cellpadding="0" width="780" border=0>
+<tr><td>
+<!-- Fin du fichier logo du haut---->
+
+<br />
+<script type="text/JavaScript">
+<!-- Hide the JS
+startTimeout(1200000, "/");
+// -->
+</script>
+<div id="TimeoutPopup" tabindex="0" class="modal" onkeypress="refreshSession(event)">
+<div class="modal-content">
+Your session will expire automatically in <span id=TimeoutSeconds>0</span> seconds.<br>
+<br>
+<button id="CancelTimeout" onclick="refreshSession()">Continue session</button>
+<button id="DoTimeout" onclick="endSession()">End session now</button></div>
+</div>
+<noscript>
+<meta http-equiv="Refresh" content="1200;URL=/" />
+</noscript>
+<br />
+<!--this is customized <screens/patronview_web_s58.html>-->
+<!--Fin de la partie logo du haut-->
+
+<table width="780" border="0" cellspacing="0" cellpadding="4">
+<tr valign="top">
+<td width="10">&nbsp;</td>
+<td align="left" width="75">
+<!----- Bouton : Fermer la session ----->
+<form>
+<a href="/logout~S58?" target="_self"><img src="/screens/logout.gif" alt="Log Out" border="0" /></a>
+<br />
+</form>
+</td>
+<td class="pat-titre" width="245" align="left">
+<!----- Nom de l'usager ----->
+<strong>%USERNAME%</strong><br />
+</td>
+<td class="pageMainArea" align="left" width="440">
+<!----- Zone de recherche ---->
+<img src="/screens/en-dossier-recherche.gif" border="0" alt="Search by keyword(s)"><br />
+<form class="unpadded" action="/search/a?a" name="Recherche" id="search" />
+<input maxlength="3" name="searchtype" type="hidden" value="Y" />
+<! ----- Zone de saisie ----- >
+<input maxlength="75" name="searcharg" size="38" class="main-biblio"  /><input maxlength="3" name="searchscope" type="hidden" value="58" />
+<! ------ Colonne 3 : Bouton Search  ------>
+<input type="hidden" name="SORT" value="D" /><input type="hidden" name="extended" value="0" />
+<input type="image" value="Chercher" name="submit" src="/screens/go_but_frc.gif" border="0"  align="middle" alt="Search" />
+</form>
+</td>
+<td width="10">&nbsp;</td>
+</tr>
+<tr>
+<td width="10">&nbsp;</td>
+<td width="320" class="main-s-titre" colspan="2">
+MY ACCOUNT
+</td>
+<td  class="main-s-titre" align="left">
+CURRENT TRANSACTION(S)
+</td>
+<td width="10">&nbsp;</td>
+</tr>
+</table>
+
+
+
+<table background="/screens/fond-ligne-gauche.gif" width="780" border="0" cellspacing="0" cellpadding="4" align="center">
+<tr valign="top">
+<td width="10">&nbsp;</td>
+<td width="320" class="pat-titre">
+<strong>Modify :</strong>
+<br />
+<!----- Bouton : Mot de passe ----->
+<a href="#" onClick="return open_new_window( '/patroninfo~S58/2418642/newpin' )"><img src="/screens/pat_pin.gif" alt="Modify your PIN" border="0" /></a>
+<!----- Bouton : Informations personnelles ----->
+<a href="#" onClick="return open_new_window( '/patroninfo~S58/2418642/modpinfo' )"><img src="/screens/pat_info.gif" alt="Modify Personal Information" border="0" /></a>
+<br /><br />
+<strong>View :</strong>
+<br />
+<!----- Bouton : Message de la bibliotheque ----->
+<!----- Bouton : Vos recherches favorites ----->
+<a href="/patroninfo~S58/2418642/getpsearches" target="_self"><img src="/screens/pat_getpsavedrecs.gif" alt="Preferred Searches" border="0" /></a>
+<!----- Bouton : Historique de lecture ----->
+<a href="/patroninfo~S58/2418642/readinghistory" target="_self"><img src="/screens/reading_history.gif" class="button" border="0" alt="My Reading History"></a>
+<!----- Bouton : Liste a lire ou coups de coeur ----->
+<a href="/patroninfo~S58/2418642/mylists" target="_self"><img src="/screens/my_lists.gif" alt="Your Wish Lists" border="0"/></a>
+<br />
+</td>
+
+<td width="440"  bgcolor="#ECEFF0" class="pat-titre">
+<br /> <br />
+<!----- Reservations en cours ----->
+<! br>
+<! Reservation :>
+<! span class="pat-transac">
+<! &nbsp;>
+<! /span>
+<br /><br />
+
+
+<!----- Amendes en cours ----->
+<br>
+Outstanding fee :
+<span class="pat-transac">
+&nbsp;
+<a href="/patroninfo~S58/2418642/overdues" target="_self">0.60$ in unpaid fines and bills</a>
+</span>
+<br /><br />
+
+<!----- Pret en cours ----->
+<br>
+Loan :
+<span class="pat-transac">
+&nbsp;
+<a href="/patroninfo~S58/2418642/items" target="_self">17 Items currently checked out</a>
+<br />
+</span>
+
+
+<!----- ???  ----->
+<!<!--{ifbookings}-->
+<!<!--{bookingsbtn}-->
+<!<!--{xif}-->
+</td>
+<td width="10">&nbsp;</td>
+</tr>
+
+<tr>
+<td>&nbsp;</td>
+<td colspan="2">
+<!----- Probablement pour la photo de l'usager ----->
+<!<!--{ifpatimage}-->
+<!<!--{patimage}-->
+<!<!--{xif}-->
+
+<!----- Bouton : My Millennium searching ----->
+<!<!--{ifmymil}-->
+<!<!--{searchbtn}-->
+<!<!--{xif}-->
+<hr color="#990000">
+</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td colspan="2">
+<div class="patFuncArea">
+<form name="hold_form" method="POST" id="hold_form" ><input type="HIDDEN" id="holdpagecmd" />
+
+<a href="#" onClick="return submitHold( 'sortByRequest', 'byreqdate' )"><img src="/screens/sortreqdate.gif" alt="Sort by reservation date" align="bottom" border="0" /></a>
+<input type="SUBMIT" name="sortByStatus" value="Sort by Status" />
+<input type="HIDDEN" name="currentsortorder" value="current_pickup" />
+<a href="#"  onClick="return submitHold( 'requestCancelAll', 'requestCancelAll' )"><img src="/screens/pat_cancelall.gif" alt="CANCEL ALL" border="0" /></a>
+<a href="#"  onClick="return submitHold( 'requestUpdateHoldsSome', 'requestUpdateHoldsSome' )"><img src="/screens/pat_cancelmark.gif" alt="CANCEL SELECTED ITEMS" border="0" /></a>
+<table border="0" class="patFunc"><tr class="patFuncTitle">
+<th colspan="5" class="patFuncTitle">
+<label id="items_count">1 HOLD</label>
+</th>
+</tr>
+
+<tr class="patFuncHeaders">
+<th class="patFuncHeaders"> CANCEL </th>
+<th class="patFuncHeaders"> TITLE </th>
+<th class="patFuncHeaders"> STATUS </th>
+<th class="patFuncHeaders">PICKUP LOCATION</th>
+<th class="patFuncHeaders"> CANCEL IF NOT FILLED BY </th>
+</tr>
+
+
+<tr class="patFuncEntry">
+<td  class="patFuncMark" >
+<input type="checkbox" name="canceli7101411x00" id="canceli7101411x00" />
+</td>
+<td  class="patFuncTitle">
+<label for="canceli7101411x00"><a href="/record=b2378896~S58"><span class="patFuncTitleMain">Il l'a fait! / Ole Könnecke &#59; [traduit de l'allemand par Florence Seyvos].</span></a></label>
+<br />
+</td>
+<td  class="patFuncStatus"> 1 of 1 holds </td>
+<td class="patFuncPickup">LA PETITE-PATRIE</td>
+<td class="patFuncCancel">21-11-19</td>
+</tr>
+
+</table>
+
+<a href="#" onClick="return submitHold( 'sortByRequest', 'byreqdate' )"><img src="/screens/sortreqdate.gif" alt="Sort by reservation date" align="bottom" border="0" /></a>
+<input type="SUBMIT" name="sortByStatus" value="Sort by Status" />
+<input type="HIDDEN" name="currentsortorder" value="current_pickup" />
+<a href="#"  onClick="return submitHold( 'requestCancelAll', 'requestCancelAll' )"><img src="/screens/pat_cancelall.gif" alt="CANCEL ALL" border="0" /></a>
+<a href="#"  onClick="return submitHold( 'requestUpdateHoldsSome', 'requestUpdateHoldsSome' )"><img src="/screens/pat_cancelmark.gif" alt="CANCEL SELECTED ITEMS" border="0" /></a>
+</form><script type="text/JavaScript">
+<!--Hide the JS
+document.getElementById( 'items_count' ).innerHTML = '1 HOLD';
+// Unhide the JS --></script>
+</div>
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+
+
+<br />
+<!------ Fin de la page -----> 
+</tr>
+</td>
+</table>
+<table width="780" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF">
+<tr height="23"> 
+<td  background="/screens/fond-bas-page.gif" colspan="2">&nbsp;
+</td>
+</tr>
+<tr>
+<td width="20">&nbsp;</td> 
+<td class="main-credit">
+Nelligan banner: <br />
+<b>Roseline Granet</b>, <i>Monument &agrave; &Eacute;mile Nelligan</i> (2005).<br />
+Saint-Louis Square, Plateau-Mont-Royal Borough, &#169;Ville de Montr&eacute;al 2006. <br /><br /><br />
+</td>
+</tr>
+</table>
+</body>
+</html>
+
+
+</body>
+</html>
+

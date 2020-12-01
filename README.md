@@ -10,7 +10,7 @@ using same software.
 Import the lib in your project
 
 ```
-npm install nelligan-api
+yarn add nelligan-api
 ```
 
 Then start using it..
@@ -98,7 +98,9 @@ api.renew(card, book)
 
 ## Running the tests
 
-No test yet. TODO
+```
+yarn test
+```
 
 ## Built With
 

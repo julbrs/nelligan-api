@@ -1,6 +1,6 @@
 {
   "name": "nelligan-api",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "API to connect to Nelligan webservice",
   "main": "index.js",
   "scripts": {
@@ -9,14 +9,18 @@
   "author": "Julien Bras <julienbras@sidoine.org>",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.26.0",
+    "axios-cookiejar-support": "^2.0.4",
     "cheerio": "^1.0.0-rc.2",
     "marcrecord": "^1.1.10",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "tough-cookie": "^4.0.0"
   },
   "bugs": "https://github.com/bobman38/nelligan-api/issues",
   "homepage": "https://github.com/bobman38/nelligan-api#readme",
   "repository": "github:bobman38/nelligan-api",
   "devDependencies": {
+    "mocha": "^9.2.1",
     "nock": "^11.7.0"
   }
 }

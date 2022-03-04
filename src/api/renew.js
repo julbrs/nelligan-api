@@ -1,54 +1,9 @@
 const cheerio = require("cheerio");
 var request = require("request");
-const { tableRowToBook } = require("./utils");
-const myConst = require("./const");
+const myConst = require("../const");
+const { tableRowToHistory } = require("../utils");
 
-const history = require("./api/history");
-const bookinfo = require("./api/bookinfo");
-const hold = require("./api/hold");
-
-exports.books = (card) => {
-  return new Promise((resolve, reject) => {
-    if (!(card && card.code && card.pin)) {
-      reject("Card info not complete");
-    }
-    var books = [];
-    var cookieJar = request.jar();
-    request.post(
-      {
-        url: myConst.NELLIGAN_URL + "/patroninfo/?",
-        jar: cookieJar,
-        form: card,
-        followAllRedirects: true,
-      },
-      function (err, res, body) {
-        // let's soup that heu cheerio that
-        if (body.includes("Sorry, ")) {
-          // error during login !
-          reject("Error during login");
-        }
-
-        var data = cheerio.load(body);
-        var fine = data("span.pat-transac a");
-
-        if (fine.text() === "") {
-          fine = "";
-        } else {
-          fine = fine.text();
-        }
-        data("tr.patFuncEntry").each(function (index, element) {
-          books[index] = tableRowToBook(data, index, element);
-        });
-        resolve({
-          books: books,
-          fine: fine,
-        });
-      }
-    );
-  });
-};
-
-exports.renew = (card, book) => {
+module.exports = (card, book) => {
   return new Promise((resolve, reject) => {
     if (!(card && card.code && card.pin)) {
       reject("Card info not complete");
@@ -104,7 +59,8 @@ exports.renew = (card, book) => {
                     .substring(0, 8);
                   resolve({ date: duedate });
                   //TODO
-                  const regexduedate = / DUE (\d{2}-\d{2}-\d{2})(?: FINE\(up to now\) (.*)\$)?(?:  Renewed (\d) times?)?/gm;
+                  const regexduedate =
+                    / DUE (\d{2}-\d{2}-\d{2})(?: FINE\(up to now\) (.*)\$)?(?:  Renewed (\d) times?)?/gm;
                   while ((m = regexduedate.exec(duedate)) !== null) {
                     // This is necessary to avoid infinite loops with zero-width matches
                     if (m.index === regexduedate.lastIndex) {
@@ -126,7 +82,3 @@ exports.renew = (card, book) => {
     );
   });
 };
-
-exports.bookinfo = bookinfo;
-exports.history = history;
-exports.hold = hold;

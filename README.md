@@ -16,7 +16,7 @@ yarn add nelligan-api
 Then start using it..
 
 ```
-var api = require('nelligan-api')
+const api = require('nelligan-api')
 
 # define your user library card
 card = {
@@ -25,13 +25,7 @@ card = {
 }
 
 # list actual books on the card
-api.books(card)
-  .then(data => {
-    console.log(data)
-  })
-  .catch((err) => {
-    console.log(err)
-  })
+const books = await api.books(card)
 ```
 
 Sample output:
@@ -56,46 +50,47 @@ Sample output:
 
 Get list of book for a specific card
 ```
-api.books(card)
-  .then(data => {
-    console.log(data)
-  })
-  .catch((err) => {
-    console.log(err)
-  })
+const books = await api.books(card)
 ```
 
 ### Get Book Information
 
-Get additionnal book information (summary, isbn, img link)
+Get additional information (summary, isbn, img link)
 
-``record`` is coming from ``book.record``.
+`record` is coming from `book.record`.
 
 ```
-api.bookinfo(record)
-  .then(data => {
-    console.log(data)
-  })
-  .catch((err) => {
-    console.log(err)
-  })
+const book = await api.bookinfo(record)
 ```
 
 ### Renew a book
 
 Renew a specific book on a specific Card
 
-``book``is coming from the first ``books`` query.
+`book` is coming from the first `books` query.
 ```
-api.renew(card, book)
-  .then(data => {
-    console.log(data)
-  })
-  .catch((err) => {
-    console.log(err)
-  })
+const data = await api.renew(card, book)
 ```
 
+### Get holds (reservations)
+
+```
+const books = await api.holds(card)
+```
+
+### Search books
+
+```
+const books = await api.search("a keywork expression")
+```
+
+### Reserve a book
+
+```
+const data = await api.reserve(card, record, library_code)
+```
+
+A `library_code` list is provided by `api.libraries`
 ## Running the tests
 
 ```

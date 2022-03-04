@@ -11,5 +11,4 @@ jobs:
         with:
           node-version: 12
       - run: yarn
-      - run: yarn global add mocha
       - run: yarn test

@@ -1,8 +1,6 @@
 const api = require("../");
-
 const nock = require("nock");
-
-const URL = require("../lib/const").NELLIGAN_URL;
+const URL = require("../src/const").NELLIGAN_URL;
 
 const record = "b2674328";
 const badrecord = "bad";
@@ -30,8 +28,7 @@ describe("bookinfo", () => {
     return api.bookinfo(record).then(
       (data) =>
         assert.deepStrictEqual(data, {
-          img:
-            "http://nelligandecouverte.ville.montreal.qc.ca/numerisation/couvertures/face/9782368526460c.jpg",
+          img: "http://nelligandecouverte.ville.montreal.qc.ca/numerisation/couvertures/face/9782368526460c.jpg",
           isbn: "9782368526460",
           pub: "Paris : Kurokawa, [2018]",
           record: "b2674328",

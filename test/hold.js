@@ -1,8 +1,6 @@
-const api = require("..");
-
+const api = require("../");
 const nock = require("nock");
-
-const URL = require("../lib/const").NELLIGAN_URL;
+const URL = require("../src/const").NELLIGAN_URL;
 
 const card_hold = {
   code: 1,

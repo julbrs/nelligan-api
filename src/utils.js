@@ -17,7 +17,8 @@ exports.tableRowToBook = (data, index, element) => {
     book.record = m[1];
   }
 
-  const regexduedate = / DUE (\d{2}-\d{2}-\d{2})(?: FINE\(up to now\) (.*)\$)?(?:  Renewed (\d) times?)?/gm;
+  const regexduedate =
+    / DUE (\d{2}-\d{2}-\d{2})(?: FINE\(up to now\) (.*)\$)?(?:  Renewed (\d) times?)?/gm;
   while ((m = regexduedate.exec(book.duedate)) !== null) {
     // This is necessary to avoid infinite loops with zero-width matches
     if (m.index === regexduedate.lastIndex) {
@@ -57,10 +58,12 @@ exports.tableRowToHistory = (data, index, element) => {
 };
 
 exports.tableRowToHold = (data, index, element) => {
-  var book = {};
+  let book = {};
   book.title = data(element).find("span.patFuncTitleMain").text();
   book.cancel = data(element).find("td.patFuncCancel").text();
   book.pickup = data(element).find("td.patFuncPickup").text();
+  const status = data(element).find("td.patFuncStatus").text().trim();
+
   //book.rid = data(element).find('td.patFuncMark input').attr('id');
   //book.rvalue = data(element).find('td.patFuncMark input').attr('value');
   const regex = /\/record=(.*)~.*/gm;
@@ -75,5 +78,13 @@ exports.tableRowToHold = (data, index, element) => {
     book.record = m[1];
   }
 
+  // compute status
+  if (status == "") {
+    book.status = "available";
+  } else if (status == "Available soon") {
+    book.status = "soon";
+  } else {
+    book.status = "hold";
+  }
   return book;
 };

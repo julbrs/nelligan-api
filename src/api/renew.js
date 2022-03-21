@@ -1,7 +1,6 @@
 const cheerio = require("cheerio");
 var request = require("request");
 const myConst = require("../const");
-const { tableRowToHistory } = require("../utils");
 
 module.exports = (card, book) => {
   return new Promise((resolve, reject) => {
@@ -46,7 +45,6 @@ module.exports = (card, book) => {
               reject({ msg: "NO_BARCODE" });
             } else {
               var duedate = data(row).find("td.patFuncStatus").text();
-              //console.log(duedate)
               if (duedate.includes("ON HOLD")) {
                 reject({ msg: "ON_HOLD" });
               } else if (duedate.includes("TOO SOON TO RENEW")) {

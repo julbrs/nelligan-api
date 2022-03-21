@@ -20,7 +20,7 @@ var assert = require("assert");
 describe("reserve", () => {
   beforeEach(() => {
     nock(URL)
-      .post("/patroninfo/?", "code=1&pin=1")
+      .post("/patroninfo/?", new URLSearchParams(card_good).toString())
       .replyWithFile(200, __dirname + "/data/login_ok.html");
 
     nock(URL)

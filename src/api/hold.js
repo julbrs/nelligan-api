@@ -1,67 +1,58 @@
+const axios = require("axios");
+const axiosCookieJarSupport = require("axios-cookiejar-support");
+const toughCookie = require("tough-cookie");
 const cheerio = require("cheerio");
-var request = require("request");
 const myConst = require("../const");
 const { tableRowToHold } = require("../utils");
 
-module.exports = (card) => {
-  return new Promise((resolve, reject) => {
-    if (!(card && card.code && card.pin)) {
-      reject("Card info not complete");
+const jar = new toughCookie.CookieJar();
+const client = axiosCookieJarSupport.wrapper(axios.create({ jar }));
+
+module.exports = async (card) => {
+  if (!(card && card.code && card.pin)) {
+    throw new Error("Card info not complete");
+  }
+
+  let books = [];
+
+  // let's login first
+  const profilePage = await client.post(
+    `${myConst.NELLIGAN_URL}/patroninfo/?`,
+    new URLSearchParams(card),
+    {
+      headers: { "Content-Type": "multipart/form-data" },
     }
-    var books = [];
-    var cookieJar = request.jar();
-    request.post(
-      {
-        url: myConst.NELLIGAN_URL + "/patroninfo/?",
-        jar: cookieJar,
-        form: card,
-        followAllRedirects: true,
-      },
-      function (err, res, body) {
-        if (err) {
-          return reject(err);
-        }
-        // let's soup that heu cheerio that
-        if (body.includes("Sorry, ")) {
-          // error during login !
-          return reject(new Error("Error during login"));
-        }
+  );
 
-        // search the hold link
-        var data = cheerio.load(body);
-        var hold_url = data("span.pat-transac").parent().find("a").attr("href");
+  // check if login is correct
+  if (profilePage.data.includes("Sorry, ")) {
+    throw new Error("Error during login");
+  }
 
-        // if no hold url then there is no hold
-        if (!hold_url) {
-          resolve({
-            hold: [],
-          });
-        }
+  // search the hold link
+  const profileData = cheerio.load(profilePage.data);
+  const holdUrl = profileData("span.pat-transac")
+    .parent()
+    .find("a")
+    .attr("href");
 
-        // do the hold query
-        request.get(
-          {
-            url: myConst.NELLIGAN_URL + hold_url,
-            jar: cookieJar,
-            followAllRedirects: true,
-          },
-          function (err2, res2, body2) {
-            if (err2) {
-              return reject(err2);
-            }
+  // if no hold url then there is no hold
+  if (!holdUrl) {
+    return {
+      hold: books,
+    };
+  }
 
-            // do stuff
-            var data = cheerio.load(body2);
+  // go to holds page
+  const holdPage = await client.get(`${myConst.NELLIGAN_URL}${holdUrl}`);
 
-            data("tr.patFuncEntry").each(function (index, element) {
-              books[index] = tableRowToHold(data, index, element);
-            });
-            resolve({
-              hold: books,
-            });
-          }
-        ); // end of 2nd query
-      }
-    );
+  // do stuff
+  const holdData = cheerio.load(holdPage.data);
+
+  holdData("tr.patFuncEntry").each((index, element) => {
+    books[index] = tableRowToHold(holdData, index, element);
   });
+  return {
+    hold: books,
+  };
 };

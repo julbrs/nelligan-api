@@ -32,7 +32,6 @@ module.exports = (card) => {
         var history_url = data('img[alt="My Reading History"]')
           .parent()
           .attr("href");
-        //console.log(history_url)
 
         // do the history query
         request.get(

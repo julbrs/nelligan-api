@@ -1,5 +1,7 @@
 # Nelligan-api
 
+[![CI](https://github.com/julbrs/nelligan-api/actions/workflows/main.yml/badge.svg)](https://github.com/julbrs/nelligan-api/actions/workflows/main.yml)
+
 JS lib that can interact with the [Nelligan Montral](http://nelligan.ville.montreal.qc.ca/)
 book library system: list book on your card, check when you need to renew, renew books...
 The Montreal system is based over the III Encore product so it might work with other systems

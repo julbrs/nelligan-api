@@ -1,7 +1,6 @@
 const cheerio = require("cheerio");
 const axios = require("axios");
 const myConst = require("../const");
-const { tableRowToHistory } = require("../utils");
 
 module.exports = async (search) => {
   const result = await axios.get(`${myConst.NELLIGAN_URL}/search/a`, {

@@ -3,6 +3,7 @@ const nock = require("nock");
 const URL = require("../src/const").NELLIGAN_URL;
 
 const record = "b2674328";
+const record2 = "b2674329";
 
 const card_good = {
   code: 1,
@@ -38,5 +39,14 @@ describe("reserve", () => {
   it("should reserve successfully one book", async () => {
     const data = await api.reserve(card_good, record, reservation_info.locx00);
     assert.equal(data, true);
+  });
+
+  it("should fail to reserve not available book", async () => {
+    nock(URL)
+      .get("/record=" + record2)
+      .replyWithFile(200, __dirname + "/data/bookinfo_not_available.html");
+
+    const data = await api.reserve(card_good, record2, reservation_info.locx00);
+    assert.equal(data, false);
   });
 });

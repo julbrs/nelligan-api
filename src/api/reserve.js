@@ -31,6 +31,11 @@ module.exports = async (card, record, library_code) => {
     .parent()
     .attr("href");
 
+  if (reserve_link === undefined) {
+    // the book is not available
+    return false;
+  }
+
   // then reserve it
   const reservePage = await client.post(
     `${myConst.NELLIGAN_URL}${reserve_link}`,

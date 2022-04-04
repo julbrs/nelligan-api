@@ -16,7 +16,6 @@ describe("search", () => {
 
   it("should list of searches", async () => {
     const data = await api.search(search);
-    console.log(data);
     assert.equal(data.length, 50);
     assert.equal(
       data[0].title,

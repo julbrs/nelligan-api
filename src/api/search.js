@@ -21,12 +21,17 @@ module.exports = async (search) => {
       const checkbox = data(element).find("p.main-no-doc input");
       const type = data(element).find("div.brief-type-doc").text().trim();
       const titre = data(element).find("span.brief-lien-titre a");
+      const resume = data(element).find("span.main-resume b");
 
       return {
         record: checkbox.attr("value"),
         type: type,
         link: titre.attr("href"),
         title: titre.text(),
+        resume: resume
+          .text()
+          .replace(/(\r\n|\n|\r)/gm, " ")
+          .trim(),
       };
     })
     .toArray();

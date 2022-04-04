@@ -16,10 +16,12 @@ describe("search", () => {
 
   it("should list of searches", async () => {
     const data = await api.search(search);
+    console.log(data);
     assert.equal(data.length, 50);
     assert.equal(
       data[0].title,
       "Hubert Reeves nous explique - tome 2 - La forêt"
     );
+    assert.equal(data[0].resume, "Bruxelles : Le Lombard, [2020].");
   });
 });

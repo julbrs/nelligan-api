@@ -1,62 +1,50 @@
 const cheerio = require("cheerio");
-var request = require("request");
+const axios = require("axios");
+const axiosCookieJarSupport = require("axios-cookiejar-support");
+const toughCookie = require("tough-cookie");
+
 const myConst = require("../const");
 const { tableRowToHistory } = require("../utils");
 
-module.exports = (card) => {
-  return new Promise((resolve, reject) => {
-    if (!(card && card.code && card.pin)) {
-      reject("Card info not complete");
+const jar = new toughCookie.CookieJar();
+const client = axiosCookieJarSupport.wrapper(axios.create({ jar }));
+
+module.exports = async (card) => {
+  if (!(card && card.code && card.pin)) {
+    throw new Error("Card info not complete");
+  }
+
+  // let's login first
+  const profilePage = await client.post(
+    `${myConst.NELLIGAN_URL}/patroninfo/?`,
+    new URLSearchParams(card),
+    {
+      headers: { "Content-Type": "multipart/form-data" },
     }
-    var books = [];
-    var cookieJar = request.jar();
-    request.post(
-      {
-        url: myConst.NELLIGAN_URL + "/patroninfo/?",
-        jar: cookieJar,
-        form: card,
-        followAllRedirects: true,
-      },
-      function (err, res, body) {
-        if (err) {
-          return reject(err);
-        }
-        // let's soup that heu cheerio that
-        if (body.includes("Sorry, ")) {
-          // error during login !
-          return reject(new Error("Error during login"));
-        }
+  );
 
-        // search the history link
-        var data = cheerio.load(body);
-        var history_url = data('img[alt="My Reading History"]')
-          .parent()
-          .attr("href");
+  // check if login is correct
+  if (profilePage.data.includes("Sorry, ")) {
+    throw new Error("Error during login");
+  }
 
-        // do the history query
-        request.get(
-          {
-            url: myConst.NELLIGAN_URL + history_url,
-            jar: cookieJar,
-            followAllRedirects: true,
-          },
-          function (err2, res2, body2) {
-            if (err2) {
-              return reject(err2);
-            }
+  // search the history link
+  const profileData = cheerio.load(profilePage.data);
+  const history_url = profileData('img[alt="My Reading History"]')
+    .parent()
+    .attr("href");
 
-            // do stuff
-            var data = cheerio.load(body2);
+  // go to history page
+  const historyPage = await client.get(`${myConst.NELLIGAN_URL}${history_url}`);
 
-            data("tr.patFuncEntry").each(function (index, element) {
-              books[index] = tableRowToHistory(data, index, element);
-            });
-            resolve({
-              history: books,
-            });
-          }
-        ); // end of 2nd query
-      }
-    );
-  });
+  // do stuff
+  const historyData = cheerio.load(historyPage.data);
+
+  const books = historyData("tr.patFuncEntry")
+    .map((index, element) => tableRowToHistory(historyData, index, element))
+    .get();
+
+  return {
+    history: books,
+  };
 };

@@ -1,45 +1,48 @@
+const axios = require("axios");
+const axiosCookieJarSupport = require("axios-cookiejar-support");
+const toughCookie = require("tough-cookie");
 const cheerio = require("cheerio");
-var request = require("request");
 const myConst = require("../const");
 const { tableRowToBook } = require("../utils");
 
-module.exports = (card) => {
-  return new Promise((resolve, reject) => {
-    if (!(card && card.code && card.pin)) {
-      reject("Card info not complete");
+const jar = new toughCookie.CookieJar();
+const client = axiosCookieJarSupport.wrapper(axios.create({ jar }));
+
+module.exports = async (card) => {
+  if (!(card && card.code && card.pin)) {
+    throw new Error("Card info not complete");
+  }
+
+  // let's login first
+  const profilePage = await client.post(
+    `${myConst.NELLIGAN_URL}/patroninfo/?`,
+    new URLSearchParams(card),
+    {
+      headers: { "Content-Type": "multipart/form-data" },
     }
-    var books = [];
-    var cookieJar = request.jar();
-    request.post(
-      {
-        url: myConst.NELLIGAN_URL + "/patroninfo/?",
-        jar: cookieJar,
-        form: card,
-        followAllRedirects: true,
-      },
-      function (err, res, body) {
-        // let's soup that heu cheerio that
-        if (body.includes("Sorry, ")) {
-          // error during login !
-          reject("Error during login");
-        }
+  );
 
-        var data = cheerio.load(body);
-        var fine = data("span.pat-transac a");
+  // check if login is correct
+  if (profilePage.data.includes("Sorry, ")) {
+    throw new Error("Error during login");
+  }
 
-        if (fine.text() === "") {
-          fine = "";
-        } else {
-          fine = fine.text();
-        }
-        data("tr.patFuncEntry").each(function (index, element) {
-          books[index] = tableRowToBook(data, index, element);
-        });
-        resolve({
-          books: books,
-          fine: fine,
-        });
-      }
-    );
-  });
+  // inspect page
+  const data = cheerio.load(profilePage.data);
+  let fine = data("span.pat-transac a");
+
+  if (fine.text() === "") {
+    fine = "";
+  } else {
+    fine = fine.text();
+  }
+
+  const books = data("tr.patFuncEntry")
+    .map((index, element) => tableRowToBook(data, index, element))
+    .get();
+
+  return {
+    books: books,
+    fine: fine,
+  };
 };

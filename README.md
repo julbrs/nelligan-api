@@ -102,7 +102,7 @@ yarn test
 ## Built With
 
 * [Nelligan](http://nelligan.ville.montreal.qc.ca/) - The web site scrapped
-* [Request](https://github.com/request/request) - To request queries
+* [Axios](https://github.com/axios/axios) - To request queries
 * [Cherioo](https://github.com/cheeriojs/cheerio) - To read the HTML
 
 

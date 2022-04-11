@@ -1,6 +1,6 @@
 {
   "name": "nelligan-api",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "API to connect to Nelligan webservice",
   "main": "index.js",
   "scripts": {

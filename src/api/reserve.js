@@ -4,10 +4,10 @@ const toughCookie = require("tough-cookie");
 const cheerio = require("cheerio");
 const myConst = require("../const");
 
-const jar = new toughCookie.CookieJar();
-const client = axiosCookieJarSupport.wrapper(axios.create({ jar }));
-
 module.exports = async (card, record, library_code) => {
+  const jar = new toughCookie.CookieJar();
+  const client = axiosCookieJarSupport.wrapper(axios.create({ jar }));
+
   if (!(card && card.code && card.pin)) {
     throw new Error("Card info not complete");
   }

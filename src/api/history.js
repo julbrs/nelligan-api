@@ -6,10 +6,10 @@ const toughCookie = require("tough-cookie");
 const myConst = require("../const");
 const { tableRowToHistory } = require("../utils");
 
-const jar = new toughCookie.CookieJar();
-const client = axiosCookieJarSupport.wrapper(axios.create({ jar }));
-
 module.exports = async (card) => {
+  const jar = new toughCookie.CookieJar();
+  const client = axiosCookieJarSupport.wrapper(axios.create({ jar }));
+
   if (!(card && card.code && card.pin)) {
     throw new Error("Card info not complete");
   }

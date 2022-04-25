@@ -12,3 +12,4 @@ jobs:
           node-version: 16
       - run: yarn
       - run: yarn test:ci
+      - uses: codecov/codecov-action@v2
